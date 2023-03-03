@@ -1,19 +1,19 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
 import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import Landing from './pages/Landing';
+import Breakfast from './pages/Breakfast';
+import Results from './pages/Results';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<div>Home</div>} />
-        <Route path='/breakfast' element={<div>Breakfast</div>} />
+        <Route path='/' element={<Landing />} />
+        <Route path='/breakfast' element={<Breakfast />} />
         <Route path='/lunch' element={<div>Lunch</div>} />
         <Route path='/dinner' element={<div>Dinner</div>} />
-        <Route path='/results' element={<div>Results</div>} />
+        <Route path='/results' element={<Results />} />
       </Routes>
     </BrowserRouter>
   );
