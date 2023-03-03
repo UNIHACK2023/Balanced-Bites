@@ -2,8 +2,10 @@ import { useState } from 'react';
 import './App.css';
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import Landing from './pages/Landing';
-import Breakfast from './pages/Breakfast';
 import Results from './pages/Results';
+import Breakfast from './pages/Breakfast';
+import Lunch from './pages/Lunch';
+import Dinner from './pages/Dinner';
 
 function App() {
   return (
@@ -11,8 +13,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Landing />} />
         <Route path='/breakfast' element={<Breakfast />} />
-        <Route path='/lunch' element={<div>Lunch</div>} />
-        <Route path='/dinner' element={<div>Dinner</div>} />
+        <Route path='/lunch' element={<Lunch />} />
+        <Route path='/dinner' element={<Dinner />} />
         <Route path='/results' element={<Results />} />
       </Routes>
     </BrowserRouter>

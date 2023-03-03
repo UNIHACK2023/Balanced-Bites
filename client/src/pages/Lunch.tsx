@@ -2,18 +2,15 @@ import React from 'react';
 import FormPage from '../components/FormPage';
 import { Link } from 'react-router-dom';
 
-const Breakfast = () => {
+const Lunch = () => {
   return (
     <div>
-      <FormPage
-        title='Breakfast'
-        description='How do you like your breakfast?'
-      />
-      <Link to='/lunch'>
+      <FormPage title='Lunch' description='How do you like your lunch?' />
+      <Link to='/dinner'>
         <button>Next</button>
       </Link>
     </div>
   );
 };
 
-export default Breakfast;
+export default Lunch;
