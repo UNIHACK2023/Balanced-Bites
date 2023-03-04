@@ -1,7 +1,8 @@
 import React from 'react'
 
 const Results = () => {
-  const formData = JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
+  const formDates = JSON.parse(localStorage.getItem('formDates') || '[]')
+  const formData = JSON.parse(localStorage.getItem(formDates[formDates.length - 1]) || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
   return (
     <div>
       <h1>Results</h1>

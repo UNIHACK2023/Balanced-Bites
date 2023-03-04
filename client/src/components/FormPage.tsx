@@ -29,16 +29,24 @@ const FormPage = (props: customiseForm) => {
     JSON.parse(localStorage.getItem(key) || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
   );
 
+  const [formDates, setFormDates] = React.useState(JSON.parse(localStorage.getItem('formDates') || '[]'));
+  if (!formDates.includes(key)) {
+    setFormDates([...formDates, key]);
+  }
+
   const handleChange = (e: Event, value: number | number[]) => {
     const target = e.target as HTMLInputElement;
     const { name } = target;
-    console.log(name, value)
     setFormData({ ...formData, [props.title.toLowerCase()]: { ...formData[props.title.toLowerCase()], [name]: value } });
   };
 
   React.useEffect(() => {
     localStorage.setItem(key, JSON.stringify(formData));
   }, [formData]);
+
+  React.useEffect(() => {
+    localStorage.setItem('formDates', JSON.stringify(formDates));
+  }, [formDates]);
 
   return (
     <div>
