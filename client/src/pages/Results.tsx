@@ -6,23 +6,23 @@ const Results = () => {
     <div>
       <h1>Results</h1>
       <h2>Breakfast</h2>
-      <p>Vegetable: {formData.breakfast.vegetable}</p>
-      <p>Fruit: {formData.breakfast.fruit}</p>
-      <p>Grain: {formData.breakfast.grain}</p>
-      <p>Meat: {formData.breakfast.meat}</p>
-      <p>Dairy: {formData.breakfast.dairy}</p>
+      <p>Vegetable: {formData.breakfast.vegetable || 0}</p>
+      <p>Fruit: {formData.breakfast.fruit || 0}</p>
+      <p>Grain: {formData.breakfast.grain || 0}</p>
+      <p>Meat: {formData.breakfast.meat || 0}</p>
+      <p>Dairy: {formData.breakfast.dairy || 0}</p>
       <h2>Lunch</h2>
-      <p>Vegetable: {formData.lunch.vegetable}</p>
-      <p>Fruit: {formData.lunch.fruit}</p>
-      <p>Grain: {formData.lunch.grain}</p>
-      <p>Meat: {formData.lunch.meat}</p>
-      <p>Dairy: {formData.lunch.dairy}</p>
+      <p>Vegetable: {formData.lunch.vegetable || 0}</p>
+      <p>Fruit: {formData.lunch.fruit || 0}</p>
+      <p>Grain: {formData.lunch.grain || 0}</p>
+      <p>Meat: {formData.lunch.meat || 0}</p>
+      <p>Dairy: {formData.lunch.dairy || 0}</p>
       <h2>Dinner</h2>
-      <p>Vegetable: {formData.dinner.vegetable}</p>
-      <p>Fruit: {formData.dinner.fruit}</p>
-      <p>Grain: {formData.dinner.grain}</p>
-      <p>Meat: {formData.dinner.meat}</p>
-      <p>Dairy: {formData.dinner.dairy}</p>
+      <p>Vegetable: {formData.dinner.vegetable || 0}</p>
+      <p>Fruit: {formData.dinner.fruit || 0}</p>
+      <p>Grain: {formData.dinner.grain || 0}</p>
+      <p>Meat: {formData.dinner.meat || 0}</p>
+      <p>Dairy: {formData.dinner.dairy || 0}</p>
     </div>
   )
 }
