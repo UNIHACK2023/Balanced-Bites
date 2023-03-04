@@ -195,7 +195,6 @@ const Results = () => {
           url={'https://www.example.com'}
           quote={'Dummy text!'}
           hashtag="#muo"
-          image={'../assets/test.jpg'}
         >
           <FacebookIcon size={32} round />
           </FacebookShareButton>
