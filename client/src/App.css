@@ -21,7 +21,7 @@ button {
 
 .purple-button {
   background-color: #746beb;
-  color: #F1F1EF;
+  color: #f1f1ef;
   padding: 20px;
   border: 2px solid black;
   font-size: large;
@@ -80,7 +80,7 @@ h3 {
 }
 
 .food-questions {
-  width: 50vw
+  width: 50vw;
 }
 
 .button-group {
@@ -108,6 +108,7 @@ h3 {
 
   .container {
     width: 100%;
+    height: 100%;
   }
 
   .food-questions {
@@ -127,33 +128,33 @@ h3 {
 
 .row-image1 {
   --imageHeight: 2147px;
-  background: url("./assets/row1.png") repeat-y;
+  background: url('./assets/row1.png') repeat-y;
   height: calc(var(--imageHeight) * 2);
   animation: slide-up 40s linear infinite;
 }
 
 .row-image2 {
   --imageHeight: 2147px;
-  background: url("./assets/row2.png") repeat-y;
+  background: url('./assets/row2.png') repeat-y;
   height: calc(var(--imageHeight) * 2);
   animation: slide-down 40s linear infinite;
 }
 
 .row-image3 {
   --imageHeight: 2147px;
-  background: url("./assets/row3.png") repeat-y;
+  background: url('./assets/row3.png') repeat-y;
   height: calc(var(--imageHeight) * 2);
   animation: slide-down 40s linear infinite;
 }
 
 .row-image4 {
   --imageHeight: 2147px;
-  background: url("./assets/row4.png") repeat-y;
+  background: url('./assets/row4.png') repeat-y;
   height: calc(var(--imageHeight) * 2);
   animation: slide-up 40s linear infinite;
 }
 
-@keyframes slide-up { 
+@keyframes slide-up {
   from {
     transform: translateY(0px);
   }
@@ -162,7 +163,7 @@ h3 {
   }
 }
 
-@keyframes slide-down { 
+@keyframes slide-down {
   from {
     transform: translateY(calc(var(--imageHeight) * -1));
   }
@@ -227,7 +228,7 @@ h3 {
 
 footer {
   text-align: center;
-  position: fixed; 
-  bottom:0%;
+  position: fixed;
+  bottom: 0%;
   margin-bottom: 30px;
 }
