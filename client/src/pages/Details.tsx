@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import Credits from '../components/Credits';
 import InfoModal from '../components/InfoModal';
-import dinner from '../assets/dinner.png';
+import about from '../assets/details.png';
 
 const Details = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -16,12 +16,12 @@ const Details = () => {
         <h1>Details</h1>
         <p>TODO</p>
       </InfoModal>
-      <div style={{display: 'flex'}}>
-        <div className="row-container left">
-          <div className="row-image1"></div>
+      <div style={{ display: 'flex' }}>
+        <div className='row-container left'>
+          <div className='row-image1'></div>
         </div>
-        <div className="row-container inner">
-          <div className="row-image2"></div>
+        <div className='row-container inner'>
+          <div className='row-image2'></div>
         </div>
       </div>
       <div className='container'>
@@ -29,9 +29,15 @@ const Details = () => {
           <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
-          <img src={dinner} className='logo' />
-          <h1 className='page-message'>We use these details to customise your results.<br />You may skip this if you wish.</h1>
-          <p>TODO</p>
+          <img src={about} className='logo' />
+          <h1 className='page-message'>
+            We use these details to customise your results.
+            <br />
+            You may skip this if you wish.
+          </h1>
+          // input age, gender
+          <input type='text' placeholder='Your age' />
+          <input type='text' placeholder='Your ' />
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>
@@ -45,12 +51,12 @@ const Details = () => {
           <Credits></Credits>
         </div>
       </div>
-      <div style={{display: 'flex'}}>
-        <div className="row-container inner">
-          <div className="row-image3"></div>
+      <div style={{ display: 'flex' }}>
+        <div className='row-container inner'>
+          <div className='row-image3'></div>
         </div>
-        <div className="row-container right">
-          <div className="row-image4"></div>
+        <div className='row-container right'>
+          <div className='row-image4'></div>
         </div>
       </div>
     </div>

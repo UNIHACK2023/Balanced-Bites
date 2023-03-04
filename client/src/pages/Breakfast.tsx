@@ -22,12 +22,12 @@ const Breakfast = () => {
         <h1>Breakfast</h1>
         <p>TODO</p>
       </InfoModal>
-      <div style={{display: 'flex'}}>
-        <div className="row-container left">
-          <div className="row-image1"></div>
+      <div style={{ display: 'flex' }}>
+        <div className='row-container left'>
+          <div className='row-image1'></div>
         </div>
-        <div className="row-container inner">
-          <div className="row-image2"></div>
+        <div className='row-container inner'>
+          <div className='row-image2'></div>
         </div>
       </div>
       <div className='container'>
@@ -36,7 +36,11 @@ const Breakfast = () => {
         </div>
         <div className='main-text'>
           <img src={breakfast} className='logo' />
-          <h1 className='page-message'>The most important meal to eat everyday.<br />Make sure to eat breakfast everyday.</h1>
+          <h1 className='page-message'>
+            The most important meal to eat everyday.
+            <br />
+            Make sure to eat breakfast everyday.
+          </h1>
           <FormPage
             title='Breakfast'
             description='How do you like your breakfast?'
@@ -45,11 +49,11 @@ const Breakfast = () => {
             dairy_image={milk}
             fruit_image={apple}
             protein_image={egg}
-            vegetable_colour='#FFEA7B'
-            protein_colour='#E26B87'
-            grain_colour='#7098FF'
-            dairy_colour='#BDEC98'
-            fruit_colour='#F0BA69'
+            vegetable_colour='#FFC700'
+            protein_colour='#A17FBC'
+            grain_colour='#3BB3BD'
+            dairy_colour='#7FBC8C'
+            fruit_colour='#BC7F7F'
           />
           <div className='button-group'>
             <Link to='/lunch'>
@@ -64,12 +68,12 @@ const Breakfast = () => {
           <Credits></Credits>
         </div>
       </div>
-      <div style={{display: 'flex'}}>
-        <div className="row-container inner">
-          <div className="row-image3"></div>
+      <div style={{ display: 'flex' }}>
+        <div className='row-container inner'>
+          <div className='row-image3'></div>
         </div>
-        <div className="row-container right">
-          <div className="row-image4"></div>
+        <div className='row-container right'>
+          <div className='row-image4'></div>
         </div>
       </div>
     </div>
