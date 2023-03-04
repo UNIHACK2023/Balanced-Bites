@@ -10,8 +10,8 @@ import logo from '../assets/thicklogo.png';
 const Landing = () => {
   return (
     <div className='page'>
-      <img src={row1} className='row' />
-      <img src={row2} className='row' />
+      <div><img src={row1} className='row' />
+      <img src={row2} className='row' /></div>
       <div className='container'>
         <div className='top-bar'>
           <img src={info} className='info' />
@@ -33,8 +33,8 @@ const Landing = () => {
           </footer>
         </div>
       </div>
-      <img src={row3} className='row' />
-      <img src={row4} className='row' />
+      <div><img src={row3} className='row' />
+      <img src={row4} className='row' /></div>
     </div>
   );
 };

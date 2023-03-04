@@ -19,7 +19,7 @@ button {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 60%;
   max-height: 450px;
   justify-content: center;
   border: 3px solid #000000;
@@ -28,6 +28,7 @@ button {
 
 .page {
   display: flex;
+  justify-content: space-between;
 }
 
 hr {
@@ -68,7 +69,7 @@ h3 {
 }
 
 .row {
-  width: 90px;
+  width: 7vmax;
   margin: 0 5px;
 }
 
