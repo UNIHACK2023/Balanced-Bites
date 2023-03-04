@@ -110,11 +110,12 @@ const Landing = () => {
         <div className='main-text'>
           <img src={logo} className='logo' />
           <h3>
+            ✦
             <u>
-              {' '}
-              ✦ Learn about your gut biome diversity through fun and bubbly
-              visualisations! ✦
+              Learn about your gut biome diversity through fun and bubbly
+              visualisations!
             </u>
+            ✦
             <br />A healthy diet protects you against many chronic
             noncommunicable diseases, such as heart disease, diabetes and
             cancer.
