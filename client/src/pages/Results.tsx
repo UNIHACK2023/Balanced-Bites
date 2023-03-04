@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import row1 from '../assets/row1.png';
-import row2 from '../assets/row2.png';
-import row3 from '../assets/row3.png';
-import row4 from '../assets/row4.png';
-import info from '../assets/whiteinfo.png';
-import { FacebookShareButton, FacebookIcon } from 'react-share';
+import Grid from '@mui/material/Unstable_Grid2';
 
 // Import Highcharts
 import Highcharts from "highcharts";
@@ -111,7 +106,6 @@ const Results = () => {
     color: '#F0BA69'
   }]);
 
-  
   const options = {
     chart: {
       type: 'packedbubble',
@@ -119,8 +113,7 @@ const Results = () => {
       backgroundColor: 'transparent'
     },
     title: {
-        text: 'Your cool chart',
-        align: 'left'
+        text: '',
     },
     tooltip: {
         useHTML: true,
@@ -131,86 +124,31 @@ const Results = () => {
             minSize: '100%',
             maxSize: '500%',
             zMin: 0,
-            zMax: 1000,
-            
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}',
-                filter: {
-                    property: 'y',
-                    operator: '>',
-                    value: 250
-                },
-                style: {
-                    color: 'black',
-                    textOutline: 'none',
-                    fontWeight: 'normal'
-                }
-            }
+            zMax: 1000
         }
     },
     series: data,
-    exporting: {
-      chartOptions: {
-          plotOptions: {
-              series: {
-                  dataLabels: {
-                      enabled: true
-                  }
-              }
-          }
-      }
-    },
-    navigation: {
-      buttonOptions: {
-          enabled: true
-      }
-    },
     credits: {
       enabled: false
     },
   }
 
-  useEffect(() => {
-    
-  }, [setData]);
   return (
     <div className='page'>
-      <div className="row-container left">
-        <div className="row-image1"></div>
-      </div>
-      <div className="row-container inner">
-        <div className="row-image2"></div>
-      </div>
-      <div className='container'>
-        <div className='top-bar'>
-          <img src={info} className='info' />
-        </div>
-        <div className='main-text'>
-        <div id="container">
-          <HighchartsReact highcharts={Highcharts} options={options} />
-        </div>
-        <div>
-        <FacebookShareButton
-          url={'https://www.example.com'}
-          quote={'Dummy text!'}
-          hashtag="#muo"
-        >
-          <FacebookIcon size={32} round />
-          </FacebookShareButton>
-      </div>
-          <footer>
-            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
-            link | UNIHACK 2023
-          </footer>
-        </div>
-      </div>
-      <div className="row-container inner">
-        <div className="row-image3"></div>
-      </div>
-      <div className="row-container right">
-        <div className="row-image4"></div>
-      </div>
+      <Grid container spacing={2}>
+        <Grid xs={8}>
+          <p>Test</p>
+        </Grid>
+        <Grid xs={4}>
+          <p>Test</p>
+        </Grid>
+        <Grid xs={4}>
+          <p>Test</p>
+        </Grid>
+        <Grid xs={8}>
+          <p>Test</p>
+        </Grid>
+      </Grid>
     </div>
   )
 }

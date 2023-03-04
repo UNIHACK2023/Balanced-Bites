@@ -1,8 +1,4 @@
 import { Link } from 'react-router-dom';
-import row1 from '../assets/row1.png';
-import row2 from '../assets/row2.png';
-import row3 from '../assets/row3.png';
-import row4 from '../assets/row4.png';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
 import dinner from '../assets/dinner.png';
@@ -16,11 +12,13 @@ import rice from '../assets/rice.png';
 const Dinner = () => {
   return (
     <div className='page'>
-      <div className="row-container left">
-        <div className="row-image1"></div>
-      </div>
-      <div className="row-container inner">
-        <div className="row-image2"></div>
+      <div style={{display: 'flex'}}>
+        <div className="row-container left">
+          <div className="row-image1"></div>
+        </div>
+        <div className="row-container inner">
+          <div className="row-image2"></div>
+        </div>
       </div>
       <div className='container'>
         <div className='top-bar'>
@@ -28,6 +26,7 @@ const Dinner = () => {
         </div>
         <div className='main-text'>
           <img src={dinner} className='logo' />
+          <h1 className='page-message'>The most important meal to eat everyday.<br />Make sure to eat breakfast everyday.</h1>
           <FormPage
             title='Dinner'
             description='How do you like your dinner?'
@@ -36,6 +35,11 @@ const Dinner = () => {
             grain_image={rice}
             dairy_image={cheese}
             fruit_image={pear}
+            vegetable_colour='#FFEA7B'
+            protein_colour='#E26B87'
+            grain_colour='#7098FF'
+            dairy_colour='#BDEC98'
+            fruit_colour='#F0BA69'
           />
           <div className='button-group'>
             <Link to='/results'>
@@ -53,11 +57,13 @@ const Dinner = () => {
           </footer>
         </div>
       </div>
-      <div className="row-container inner">
-        <div className="row-image3"></div>
-      </div>
-      <div className="row-container right">
-        <div className="row-image4"></div>
+      <div style={{display: 'flex'}}>
+        <div className="row-container inner">
+          <div className="row-image3"></div>
+        </div>
+        <div className="row-container right">
+          <div className="row-image4"></div>
+        </div>
       </div>
     </div>
   );

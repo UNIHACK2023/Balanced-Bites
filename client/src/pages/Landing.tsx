@@ -69,11 +69,13 @@ const Landing = () => {
 
   return (
     <div className='page'>
-      <div className="row-container left">
-        <div className="row-image1"></div>
-      </div>
-      <div className="row-container inner">
-        <div className="row-image2"></div>
+      <div style={{display: 'flex'}}>
+        <div className="row-container left">
+          <div className="row-image1"></div>
+        </div>
+        <div className="row-container inner">
+          <div className="row-image2"></div>
+        </div>
       </div>
       <div className='container'>
         <div className='top-bar'>
@@ -93,19 +95,19 @@ const Landing = () => {
           <Link to='/breakfast'>
             <button className='purple-button'>Let's get started</button>
           </Link>
-        </div>
-        <div className='bottom-bar' style={{ textAlign: 'center'}} >
-          <span>
-            © 2023 <br /> Made by Carey, Luke, Larissa, Jasmin, Wanning <br /> Github repo
+          <footer>
+            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
             link | UNIHACK 2023
-          </span>
+          </footer>
         </div>
       </div>
-      <div className="row-container inner">
-        <div className="row-image3"></div>
-      </div>
-      <div className="row-container right">
-        <div className="row-image4"></div>
+      <div style={{display: 'flex'}}>
+        <div className="row-container inner">
+          <div className="row-image3"></div>
+        </div>
+        <div className="row-container right">
+          <div className="row-image4"></div>
+        </div>
       </div>
     </div>
   );
