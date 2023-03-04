@@ -9,28 +9,105 @@ import info from '../assets/whiteinfo.png';
 import Highcharts from "highcharts";
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsMore from 'highcharts/highcharts-more';
+import HighchartsExporting from 'highcharts/modules/exporting';
 HighchartsMore(Highcharts);
-
+HighchartsExporting(Highcharts)
 
 const Results = () => {
-  const [data, setData] = React.useState<any>([{
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  const formData = JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}');
+  const [data, setData] = React.useState<any>([
+  {
+    name: 'Fruit',
+    data: [
+      {
+        name: 'Breakfast',
+        value: formData.breakfast.fruit || 0
+      },
+      {
+        name: 'Lunch',
+        value: formData.lunch.fruit || 0
+      },
+      {
+        name: 'Dinner',
+        value: formData.dinner.fruit || 0
+      }
+    ],
     color: '#FFEA7B'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  }, 
+  {
+    name: 'Meat',
+    data: [
+      {
+        name: 'Breakfast',
+        value: formData.breakfast.meat || 0
+      },
+      {
+        name: 'Lunch',
+        value: formData.lunch.meat || 0
+      },
+      {
+        name: 'Dinner',
+        value: formData.dinner.meat || 0
+      }
+    ],
     color: '#E26B87'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  },
+  {
+    name: 'Dairy',
+    data: [
+      {
+        name: 'Breakfast',
+        value: formData.breakfast.dairy || 0
+      },
+      {
+        name: 'Lunch',
+        value: formData.lunch.dairy || 0
+      },
+      {
+        name: 'Dinner',
+        value: formData.dinner.dairy || 0
+      }
+    ],
     color: '#7098FF'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  },
+  {
+    name: 'Vegetable',
+    data: [
+      {
+        name: 'Breakfast',
+        value: formData.breakfast.vegetable || 0
+      },
+      {
+        name: 'Lunch',
+        value: formData.lunch.vegetable || 0
+      },
+      {
+        name: 'Dinner',
+        value: formData.dinner.vegetable || 0
+      }
+    ],
     color: '#BDEC98'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
+  },
+  {
+    name: 'Grain',
+    data: [
+      {
+        name: 'Breakfast',
+        value: formData.breakfast.fruit || 0
+      },
+      {
+        name: 'Lunch',
+        value: formData.lunch.fruit || 0
+      },
+      {
+        name: 'Dinner',
+        value: formData.dinner.fruit || 0
+      }
+    ],
     color: '#F0BA69'
   }]);
 
-  const formData = JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}');
+  
   const options = {
     chart: {
       type: 'packedbubble',
@@ -95,8 +172,6 @@ const Results = () => {
   useEffect(() => {
     
   }, [setData]);
-
-
   return (
     <div className='page'>
       <div>
@@ -108,27 +183,6 @@ const Results = () => {
           <img src={info} className='info' />
         </div>
         <div className='main-text'>
-        {/* <div>
-          <h1>Results</h1>
-          <h2>Breakfast</h2>
-          <p>Vegetable: {formData.breakfast.vegetable || 0}</p>
-          <p>Fruit: {formData.breakfast.fruit || 0}</p>
-          <p>Grain: {formData.breakfast.grain || 0}</p>
-          <p>Meat: {formData.breakfast.meat || 0}</p>
-          <p>Dairy: {formData.breakfast.dairy || 0}</p>
-          <h2>Lunch</h2>
-          <p>Vegetable: {formData.lunch.vegetable || 0}</p>
-          <p>Fruit: {formData.lunch.fruit || 0}</p>
-          <p>Grain: {formData.lunch.grain || 0}</p>
-          <p>Meat: {formData.lunch.meat || 0}</p>
-          <p>Dairy: {formData.lunch.dairy || 0}</p>
-          <h2>Dinner</h2>
-          <p>Vegetable: {formData.dinner.vegetable || 0}</p>
-          <p>Fruit: {formData.dinner.fruit || 0}</p>
-          <p>Grain: {formData.dinner.grain || 0}</p>
-          <p>Meat: {formData.dinner.meat || 0}</p>
-          <p>Dairy: {formData.dinner.dairy || 0}</p>
-        </div> */}
         <div id="container">
           <HighchartsReact highcharts={Highcharts} options={options} />
         </div>
