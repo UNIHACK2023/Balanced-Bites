@@ -4,7 +4,8 @@ import row1 from '../assets/row1.png';
 import row2 from '../assets/row2.png';
 import row3 from '../assets/row3.png';
 import row4 from '../assets/row4.png';
-import info from '../assets/info.svg';
+import info from '../assets/whiteinfo.png';
+import logo from '../assets/thicklogo.png';
 
 const Landing = () => {
   return (
@@ -13,12 +14,10 @@ const Landing = () => {
       <img src={row2} />
       <div className='container'>
         <div className='top-bar'>
-          <button>info</button>
           <img src={info} className='info' />
         </div>
-        <hr />
         <div className='main-text'>
-          <h1>TITLE FILLER</h1>
+          <img src={logo} className='logo' />
           <h3>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

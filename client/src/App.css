@@ -20,7 +20,7 @@ button {
   max-width: 960px;
   justify-content: center;
   border: 3px solid #000000;
-  margin-top: 50px;
+  margin: 50px 10px;
 }
 
 .page {
@@ -51,6 +51,15 @@ hr {
   padding: 20px;
 }
 
-svg {
-  fill: white;
+.info {
+  width: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 80%;
+}
+
+h3 {
+  text-align: center;
 }
