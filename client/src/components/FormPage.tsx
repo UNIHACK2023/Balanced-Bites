@@ -2,6 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
+import Tooltip from '@mui/material/Tooltip';
 
 interface customiseForm {
   title: "Breakfast" | "Lunch" | "Dinner";
@@ -87,27 +88,37 @@ const FormPage = (props: customiseForm) => {
     <div>
       <Box className='food-questions'>
         <div className='slider-row'>
-          <img src={props.vegetable_image} className="food-icon" />
+          <Tooltip title="Vegetables" placement="left">
+            <img src={props.vegetable_image} className="food-icon" />
+          </Tooltip>
           <FoodSlider colour={props.vegetable_colour} name="vegetable" className="food-slider" defaultValue={formData[props.title.toLowerCase()].vegetable | 0} max={5} onChange={handleChange} />
           <h1 className="food-count">{formData[props.title.toLowerCase()].vegetable | 0}</h1>
         </div>
         <div className='slider-row'>
-          <img src={props.fruit_image} className="food-icon" />
+          <Tooltip title="Fruits" placement="left">
+            <img src={props.fruit_image} className="food-icon" />
+          </Tooltip>
           <FoodSlider colour={props.fruit_colour} name="fruit" className="food-slider" defaultValue={formData[props.title.toLowerCase()].fruit | 0} max={5} onChange={handleChange} />
           <h1 className="food-count">{formData[props.title.toLowerCase()].fruit | 0}</h1>
         </div>
         <div className='slider-row'>
-          <img src={props.grain_image} className="food-icon" />
+          <Tooltip title="Grains" placement="left">
+            <img src={props.grain_image} className="food-icon" />
+          </Tooltip>
           <FoodSlider colour={props.grain_colour} name="grain" className="food-slider" defaultValue={formData[props.title.toLowerCase()].grain | 0} max={5} onChange={handleChange} />
           <h1 className="food-count">{formData[props.title.toLowerCase()].grain | 0}</h1>
         </div>
         <div className='slider-row'>
-          <img src={props.protein_image} className="food-icon" />
+          <Tooltip title="Protein" placement="left">
+            <img src={props.protein_image} className="food-icon" />
+          </Tooltip>
           <FoodSlider colour={props.protein_colour} name="meat" className="food-slider" defaultValue={formData[props.title.toLowerCase()].meat | 0} max={5} onChange={handleChange} />
           <h1 className="food-count">{formData[props.title.toLowerCase()].meat | 0}</h1>
         </div>
         <div className='slider-row'>
-          <img src={props.dairy_image} className="food-icon" />
+          <Tooltip title="Dairy" placement="left">
+            <img src={props.dairy_image} className="food-icon" />
+          </Tooltip>
           <FoodSlider colour={props.dairy_colour} name="dairy" className="food-slider" defaultValue={formData[props.title.toLowerCase()].dairy | 0} max={5} onChange={handleChange} />
           <h1 className="food-count">{formData[props.title.toLowerCase()].dairy | 0}</h1>
         </div>
