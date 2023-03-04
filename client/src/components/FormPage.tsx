@@ -22,20 +22,22 @@ type FormData = {
 };
 
 const FormPage = (props: customiseForm) => {
-  const [formData, setFormData] = React.useState<FormData>(
-    JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
+  let d = new Date().setHours(0, 0, 0, 0);
+  let key = d.toString();
+
+  const [formData, setFormData] = React.useState(
+    JSON.parse(localStorage.getItem(key) || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
   );
 
   const handleChange = (e: Event, value: number | number[]) => {
     const target = e.target as HTMLInputElement;
     const { name } = target;
     console.log(name, value)
-    // @ts-ignore
     setFormData({ ...formData, [props.title.toLowerCase()]: { ...formData[props.title.toLowerCase()], [name]: value } });
   };
 
   React.useEffect(() => {
-    localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem(key, JSON.stringify(formData));
   }, [formData]);
 
   return (
@@ -43,11 +45,11 @@ const FormPage = (props: customiseForm) => {
       <h1>{props.title}</h1>
       <h2>{props.description}</h2>
       <Box sx={{ width: 250 }}>
-        <Slider name="vegetable" defaultValue={0} max={5} onChange={handleChange} />
-        <Slider name="fruit" defaultValue={0} max={5} onChange={handleChange} />
-        <Slider name="grain" defaultValue={0} max={5} onChange={handleChange} />
-        <Slider name="meat" defaultValue={0} max={5} onChange={handleChange} />
-        <Slider name="dairy" defaultValue={0} max={5} onChange={handleChange} />
+        <Slider name="vegetable" defaultValue={formData[props.title.toLowerCase()].vegetable || 0} max={5} onChange={handleChange} />
+        <Slider name="fruit" defaultValue={formData[props.title.toLowerCase()].fruit || 0} max={5} onChange={handleChange} />
+        <Slider name="grain" defaultValue={formData[props.title.toLowerCase()].grain || 0} max={5} onChange={handleChange} />
+        <Slider name="meat" defaultValue={formData[props.title.toLowerCase()].meat || 0} max={5} onChange={handleChange} />
+        <Slider name="dairy" defaultValue={formData[props.title.toLowerCase()].dairy || 0} max={5} onChange={handleChange} />
       </Box>
     </div>
   );
