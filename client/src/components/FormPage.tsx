@@ -1,4 +1,5 @@
 import React from 'react';
+import { styled } from '@mui/material/styles';
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
 
@@ -55,26 +56,31 @@ const FormPage = (props: customiseForm) => {
 
   return (
     <div>
-      <Box sx={{ width: 250 }}>
+      <Box className='food-questions'>
         <div className='slider-row'>
           <img src={props.vegetable_image} className="food-icon" />
-          <Slider name="vegetable" defaultValue={0} max={5} onChange={handleChange} />
+          <Slider name="vegetable" className="food-slider" defaultValue={formData[props.title.toLowerCase()].vegetable | 0} max={5} onChange={handleChange} />
+          <p>{formData[props.title.toLowerCase()].vegetable | 0}</p>
         </div>
         <div className='slider-row'>
-        <img src={props.fruit_image} className="food-icon" />
-        <Slider name="fruit" defaultValue={0} max={5} onChange={handleChange} />
+          <img src={props.fruit_image} className="food-icon" />
+          <Slider name="fruit" className="food-slider" defaultValue={formData[props.title.toLowerCase()].fruit | 0} max={5} onChange={handleChange} />
+          <p>{formData[props.title.toLowerCase()].fruit | 0}</p>
         </div>
         <div className='slider-row'>
-        <img src={props.grain_image} className="food-icon" />
-        <Slider name="grain" defaultValue={0} max={5} onChange={handleChange} />
+          <img src={props.grain_image} className="food-icon" />
+          <Slider name="grain" className="food-slider" defaultValue={formData[props.title.toLowerCase()].grain | 0} max={5} onChange={handleChange} />
+          <p>{formData[props.title.toLowerCase()].grain | 0}</p>
         </div>
         <div className='slider-row'>
-        <img src={props.protein_image} className="food-icon" />
-        <Slider name="meat" defaultValue={0} max={5} onChange={handleChange} />
+          <img src={props.protein_image} className="food-icon" />
+          <Slider name="meat" className="food-slider" defaultValue={formData[props.title.toLowerCase()].meat | 0} max={5} onChange={handleChange} />
+          <p>{formData[props.title.toLowerCase()].meat | 0}</p>
         </div>
         <div className='slider-row'>
-        <img src={props.dairy_image} className="food-icon" />
-        <Slider name="dairy" defaultValue={0} max={5} onChange={handleChange} />
+          <img src={props.dairy_image} className="food-icon" />
+          <Slider name="dairy" className="food-slider" defaultValue={formData[props.title.toLowerCase()].dairy | 0} max={5} onChange={handleChange} />
+          <p>{formData[props.title.toLowerCase()].dairy | 0}</p>
         </div>
       </Box>
     </div>
