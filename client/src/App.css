@@ -67,9 +67,56 @@ h3 {
   text-align: center;
 }
 
-.row {
-  width: 7vmax;
-  margin: 0 5px;
+.row-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 122px;
+}
+
+.row-image1 {
+  --imageHeight: 2147px;
+  background: url("./assets/row1.png") repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-up 40s linear infinite;
+}
+
+.row-image2 {
+  --imageHeight: 2147px;
+  background: url("./assets/row2.png") repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-down 40s linear infinite;
+}
+
+.row-image3 {
+  --imageHeight: 2147px;
+  background: url("./assets/row3.png") repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-down 40s linear infinite;
+}
+
+.row-image4 {
+  --imageHeight: 2147px;
+  background: url("./assets/row4.png") repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-up 40s linear infinite;
+}
+
+@keyframes slide-up { 
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(calc(var(--imageHeight) * -1));
+  }
+}
+
+@keyframes slide-down { 
+  from {
+    transform: translateY(calc(var(--imageHeight) * -1));
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 footer {
