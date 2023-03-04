@@ -10,7 +10,7 @@ const Breakfast = () => {
         description='How do you like your breakfast?'
       />
       <Link to='/lunch'>
-        <button>Next</button>
+        <button className='purple-button'>continue</button>
       </Link>
     </div>
   );

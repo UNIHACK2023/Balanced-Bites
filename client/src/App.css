@@ -5,6 +5,9 @@ body {
   background: #f1f1ef;
 }
 
+button {
+  cursor: pointer;
+}
 .purple-button {
   background-color: #746beb;
   padding: 20px;
@@ -46,4 +49,8 @@ hr {
   align-items: center;
   flex-direction: column;
   padding: 20px;
+}
+
+svg {
+  fill: white;
 }

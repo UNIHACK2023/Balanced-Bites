@@ -7,7 +7,8 @@ const Dinner = () => {
     <div>
       <FormPage title='Dinner' description='How do you like your dinner?' />
       <Link to='/results'>
-        <button>Next</button>
+        <button className='purple-button'>see results</button>
+        <button className='purple-button'>add extra meal</button>
       </Link>
     </div>
   );

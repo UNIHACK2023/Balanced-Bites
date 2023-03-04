@@ -4,6 +4,7 @@ import row1 from '../assets/row1.png';
 import row2 from '../assets/row2.png';
 import row3 from '../assets/row3.png';
 import row4 from '../assets/row4.png';
+import info from '../assets/info.svg';
 
 const Landing = () => {
   return (
@@ -13,6 +14,7 @@ const Landing = () => {
       <div className='container'>
         <div className='top-bar'>
           <button>info</button>
+          <img src={info} className='info' />
         </div>
         <hr />
         <div className='main-text'>
