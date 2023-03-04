@@ -48,7 +48,12 @@ const Landing = () => {
     credits: {
       enabled: false
     },
-    series: data
+    series: data,
+    navigation: {
+      buttonOptions: {
+          enabled: false
+      }
+    },
   };
 
   useEffect(() => {
