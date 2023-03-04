@@ -6,6 +6,7 @@ import Results from './pages/Results';
 import Breakfast from './pages/Breakfast';
 import Lunch from './pages/Lunch';
 import Dinner from './pages/Dinner';
+import Details from './pages/Details';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/breakfast' element={<Breakfast />} />
         <Route path='/lunch' element={<Lunch />} />
         <Route path='/dinner' element={<Dinner />} />
+        <Route path='/details' element={<Details />} />
         <Route path='/results' element={<Results />} />
       </Routes>
     </BrowserRouter>

@@ -1,17 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
-import FormPage from '../components/FormPage';
 import Credits from '../components/Credits';
-import dinner from '../assets/dinner.png';
-import carrot from '../assets/carrot.png';
-import pear from '../assets/pear.png';
-import streak from '../assets/meat_on_bone.png';
-import cheese from '../assets/cheese.png';
-import rice from '../assets/rice.png';
 import InfoModal from '../components/InfoModal';
+import dinner from '../assets/dinner.png';
 
-const Dinner = () => {
+const Details = () => {
   const [showModal, setShowModal] = React.useState(false);
   const handleOpen = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
@@ -19,7 +13,7 @@ const Dinner = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1>Lunch</h1>
+        <h1>Details</h1>
         <p>TODO</p>
       </InfoModal>
       <div style={{display: 'flex'}}>
@@ -36,29 +30,16 @@ const Dinner = () => {
         </div>
         <div className='main-text'>
           <img src={dinner} className='logo' />
-          <h1 className='page-message'>The most important meal to eat everyday.<br />Make sure to eat breakfast everyday.</h1>
-          <FormPage
-            title='Dinner'
-            description='How do you like your dinner?'
-            vegetable_image={carrot}
-            protein_image={streak}
-            grain_image={rice}
-            dairy_image={cheese}
-            fruit_image={pear}
-            vegetable_colour='#FFEA7B'
-            protein_colour='#E26B87'
-            grain_colour='#7098FF'
-            dairy_colour='#BDEC98'
-            fruit_colour='#F0BA69'
-          />
+          <h1 className='page-message'>We use these details to customise your results.<br />You may skip this if you wish.</h1>
+          <p>TODO</p>
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>
                 <u>skip</u>
               </button>
             </Link>
-            <Link to='/details'>
-              <button className='purple-button'>continue &#8594;</button>
+            <Link to='/results'>
+              <button className='purple-button'>finish</button>
             </Link>
           </div>
           <Credits></Credits>
@@ -76,4 +57,4 @@ const Dinner = () => {
   );
 };
 
-export default Dinner;
+export default Details;
