@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
-import Box from '@mui/material/Box';
+import Credits from '../components/Credits';
 import broccolli from '../assets/broccolli.png';
 import egg from '../assets/sunnyside_egg.png';
 import toast from '../assets/toast.png';
@@ -49,17 +49,14 @@ const Breakfast = () => {
           <div className='button-group'>
             <Link to='/lunch'>
               <button className='transparent-button'>
-                <u>didn't eat</u>
+                <u>skip</u>
               </button>
             </Link>
             <Link to='/lunch'>
               <button className='purple-button'>continue &#8594;</button>
             </Link>
           </div>
-          <footer>
-            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
-            link | UNIHACK 2023
-          </footer>
+          <Credits></Credits>
         </div>
       </div>
       <div style={{display: 'flex'}}>

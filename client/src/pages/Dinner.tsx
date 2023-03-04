@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
+import Credits from '../components/Credits';
 import dinner from '../assets/dinner.png';
-
 import carrot from '../assets/carrot.png';
 import pear from '../assets/pear.png';
 import streak from '../assets/meat_on_bone.png';
@@ -44,17 +44,14 @@ const Dinner = () => {
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>
-                <u>didn't eat</u>
+                <u>skip</u>
               </button>
             </Link>
             <Link to='/results'>
               <button className='purple-button'>finish</button>
             </Link>
           </div>
-          <footer>
-            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
-            link | UNIHACK 2023
-          </footer>
+          <Credits></Credits>
         </div>
       </div>
       <div style={{display: 'flex'}}>

@@ -23,7 +23,7 @@ button {
   background-color: #746beb;
   color: #F1F1EF;
   padding: 20px;
-  border: 3px solid black;
+  border: 2px solid black;
   font-size: large;
   font-weight: 400;
 }
@@ -76,6 +76,7 @@ hr {
 
 h3 {
   text-align: center;
+  font-size: 2.5vh;
 }
 
 .food-questions {
@@ -172,9 +173,9 @@ h3 {
 
 .transparent-button {
   background-color: transparent;
-  padding: 20px;
+  padding: 50px 0px;
   border: none;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 400;
   color: #3f3f3f;
 }
@@ -183,7 +184,6 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
 .emoji {
