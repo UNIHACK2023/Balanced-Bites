@@ -124,7 +124,7 @@ const Landing = () => {
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
           <Link to='/breakfast'>
-            <button className='purple-button'>Let's get started</button>
+            <button className='purple-button'>Let's get started &#8594;</button>
           </Link>
           <Credits></Credits>
         </div>
