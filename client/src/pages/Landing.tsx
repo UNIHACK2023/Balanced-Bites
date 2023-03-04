@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import row1 from '../assets/row1.png';
-import row2 from '../assets/row2.png';
-import row3 from '../assets/row3.png';
-import row4 from '../assets/row4.png';
 import info from '../assets/whiteinfo.png';
 import logo from '../assets/thicklogo.png';
 import Highcharts from 'highcharts';
@@ -86,7 +82,7 @@ const Landing = () => {
             nutrition. It protects you against many chronic noncommunicable
             diseases, such as heart disease, diabetes and cancer.{' '}
           </h3>
-          <div id="container" style={{width: '100%'}}>
+          <div id="highcharts-container">
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
           <Link to='/breakfast'>

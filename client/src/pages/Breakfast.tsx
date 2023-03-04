@@ -55,9 +55,11 @@ const Breakfast = () => {
             <button className='purple-button' onClick={handleClose}>close</button>
         </Box>
       </Modal>
-      <div>
-        <img src={row1} className='row' />
-        <img src={row2} className='row' />
+      <div className="row-container left">
+        <div className="row-image1"></div>
+      </div>
+      <div className="row-container inner">
+        <div className="row-image2"></div>
       </div>
       <div className='container'>
         <div className='top-bar'>
@@ -90,9 +92,11 @@ const Breakfast = () => {
           </footer>
         </div>
       </div>
-      <div>
-        <img src={row3} className='row' />
-        <img src={row4} className='row' />
+      <div className="row-container inner">
+        <div className="row-image3"></div>
+      </div>
+      <div className="row-container right">
+        <div className="row-image4"></div>
       </div>
     </div>
   );
