@@ -71,7 +71,7 @@ const Landing = () => {
       <div className="row-container">
         <div className="row-image1"></div>
       </div>
-      <div className="row-container">
+      <div className="row-container inner">
         <div className="row-image2"></div>
       </div>
       <div className='container'>
@@ -98,7 +98,7 @@ const Landing = () => {
           </footer>
         </div>
       </div>
-      <div className="row-container">
+      <div className="row-container inner">
         <div className="row-image3"></div>
       </div>
       <div className="row-container">

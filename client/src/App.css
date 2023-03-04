@@ -73,6 +73,22 @@ h3 {
   width: 122px;
 }
 
+@media all and (max-width: 480px) {
+  .row-container {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .row-container.inner {
+    display: none;
+  }
+}
+
 .row-image1 {
   --imageHeight: 2147px;
   background: url("./assets/row1.png") repeat-y;
@@ -165,7 +181,4 @@ footer {
 
 .slider-box {
   display: inline-flex;
-}
-
-.food-slider {
 }
