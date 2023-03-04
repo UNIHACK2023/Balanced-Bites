@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
 
 // Import Highcharts
 import Highcharts from "highcharts";
@@ -134,22 +136,17 @@ const Results = () => {
   }
 
   return (
-    <div className='page'>
-      <Grid container spacing={2}>
-        <Grid xs={8}>
-          <p>Test</p>
-        </Grid>
-        <Grid xs={4}>
-          <p>Test</p>
-        </Grid>
-        <Grid xs={4}>
-          <p>Test</p>
-        </Grid>
-        <Grid xs={8}>
-          <p>Test</p>
-        </Grid>
+    <Grid container sx={{width: '100vw', height: '100vh'}}>
+      <Grid xs={7}>
+        <Box>
+          <p>TODO</p>
+        </Box>
       </Grid>
-    </div>
+      <Grid xs={5}>
+        <div style={{width: '100%', height: '100%', backgroundColor: '#D9D9D9'}}>
+        </div>
+      </Grid>
+    </Grid>
   )
 }
 
