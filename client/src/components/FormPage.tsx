@@ -1,4 +1,6 @@
 import React from 'react';
+import Slider from '@mui/material/Slider';
+import Box from '@mui/material/Box';
 
 interface customiseForm {
   title: "Breakfast" | "Lunch" | "Dinner";
@@ -24,8 +26,10 @@ const FormPage = (props: customiseForm) => {
     JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
   );
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+  const handleChange = (e: Event, value: number | number[]) => {
+    const target = e.target as HTMLInputElement;
+    const { name } = target;
+    console.log(name, value)
     // @ts-ignore
     setFormData({ ...formData, [props.title.toLowerCase()]: { ...formData[props.title.toLowerCase()], [name]: value } });
   };
@@ -38,16 +42,13 @@ const FormPage = (props: customiseForm) => {
     <div>
       <h1>{props.title}</h1>
       <h2>{props.description}</h2>
-      <input type='range' name="vegetable" defaultValue="0" max="5" step="1" onChange={handleChange} />
-      <br />
-      <input type='range' name="fruit" defaultValue="0" max="5" step="1" onChange={handleChange} />
-      <br />
-      <input type='range' name="grain" defaultValue="0" max="5" step="1" onChange={handleChange} />
-      <br />
-      <input type='range' name="meat" defaultValue="0" max="5" step="1" onChange={handleChange} />
-      <br />
-      <input type='range' name="dairy" defaultValue="0" max="5" step="1" onChange={handleChange} />
-      <br />
+      <Box sx={{ width: 250 }}>
+        <Slider name="vegetable" defaultValue={0} max={5} onChange={handleChange} />
+        <Slider name="fruit" defaultValue={0} max={5} onChange={handleChange} />
+        <Slider name="grain" defaultValue={0} max={5} onChange={handleChange} />
+        <Slider name="meat" defaultValue={0} max={5} onChange={handleChange} />
+        <Slider name="dairy" defaultValue={0} max={5} onChange={handleChange} />
+      </Box>
     </div>
   );
 };
