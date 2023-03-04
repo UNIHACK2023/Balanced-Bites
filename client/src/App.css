@@ -19,7 +19,7 @@ button {
 }
 
 .container {
-  max-width: 60%;
+  width: 60%;
   max-height: 450px;
   justify-content: center;
   border: 3px solid #000000;
@@ -78,4 +78,20 @@ footer {
   bottom: 0;
   text-align: center;
   padding-bottom: 8px;
+}
+
+.transparent-button {
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  font-size: large;
+  font-weight: 400;
+  color: #3f3f3f;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
