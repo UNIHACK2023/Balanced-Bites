@@ -68,7 +68,7 @@ const Landing = () => {
 
   return (
     <div className='page'>
-      <div className="row-container">
+      <div className="row-container left">
         <div className="row-image1"></div>
       </div>
       <div className="row-container inner">
@@ -92,16 +92,18 @@ const Landing = () => {
           <Link to='/breakfast'>
             <button className='purple-button'>Let's get started</button>
           </Link>
-          <footer>
+        </div>
+        <div className='bottom-bar' style={{ textAlign: 'center'}} >
+          <span>
             © 2023 <br /> Made by Carey, Luke, Larissa, Jasmin, Wanning <br /> Github repo
             link | UNIHACK 2023
-          </footer>
+          </span>
         </div>
       </div>
       <div className="row-container inner">
         <div className="row-image3"></div>
       </div>
-      <div className="row-container">
+      <div className="row-container right">
         <div className="row-image4"></div>
       </div>
     </div>

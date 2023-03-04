@@ -7,6 +7,14 @@ body {
   overflow: hidden;
 }
 
+#root {
+  height: 100vh;
+}
+
+.page {
+  height: 100vh;
+}
+
 button {
   cursor: pointer;
 }
@@ -73,6 +81,14 @@ h3 {
   width: 122px;
 }
 
+.row-container.left {
+  margin-left: 10px;
+}
+
+.row-container.right {
+  margin-right: 10px;
+}
+
 @media all and (max-width: 480px) {
   .row-container {
     display: none;
@@ -133,13 +149,6 @@ h3 {
   to {
     transform: translateY(0px);
   }
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  padding-bottom: 8px;
 }
 
 .transparent-button {
