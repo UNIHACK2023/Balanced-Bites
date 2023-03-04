@@ -96,6 +96,7 @@ const Results = () => {
     
   }, [setData]);
 
+
   return (
     <div className='page'>
       <div>
