@@ -56,7 +56,14 @@ const Landing = () => {
   };
 
   useEffect(() => {
-    
+    const interval = setInterval(() => {
+      const newData = data.map((series: any) => ({
+        ...series,
+        data: series.data.map((value: any) => 5 * (Math.random() * 2))
+      }));
+      setData(newData);
+    }, 1000);
+    return () => clearInterval(interval);
   }, [setData]);
 
   return (
@@ -75,7 +82,7 @@ const Landing = () => {
             nutrition. It protects you against many chronic noncommunicable
             diseases, such as heart disease, diabetes and cancer.{' '}
           </h3>
-          <div id="container">
+          <div id="container" style={{width: '100%'}}>
             <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
           <Link to='/breakfast'>
