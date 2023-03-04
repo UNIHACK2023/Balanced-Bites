@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
+import Divider from '@mui/material/Divider';
 
 // Import Highcharts
 import Highcharts from "highcharts";
@@ -136,14 +136,15 @@ const Results = () => {
   }
 
   return (
-    <Grid container sx={{width: '100vw', height: '100vh'}}>
+    <Grid container sx={{height: '100%'}}>
       <Grid xs={7}>
         <Box>
           <p>TODO</p>
         </Box>
       </Grid>
       <Grid xs={5}>
-        <div style={{width: '100%', height: '100%', backgroundColor: '#D9D9D9'}}>
+        <div style={{width: '100%', height: '100%', backgroundColor: '#D9D9D9', borderStyle: 'none none none double'}}>
+          <p>TODO</p>
         </div>
       </Grid>
     </Grid>
