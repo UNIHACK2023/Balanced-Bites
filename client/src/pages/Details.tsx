@@ -31,13 +31,19 @@ const Details = () => {
         <div className='main-text'>
           <img src={about} className='logo' />
           <h1 className='page-message'>
-            We use these details to customise your results.
+            ✴Tell us a bit about you! We use these details to personalise your
+            results✴
             <br />
             You may skip this if you wish.
           </h1>
-          // input age, gender
-          <input type='text' placeholder='Your age' />
-          <input type='text' placeholder='Your ' />
+          <input type='text' placeholder='Age' />
+          <select name='age' id='age'>
+            <option value='Skip'>Sex</option>
+            <option value='Male'>Female</option>
+            <option value='Female'>Male</option>
+          </select>
+          <input type='text' placeholder='Height in cm' />
+          <input type='text' placeholder='Body mass in kg' />
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>

@@ -237,3 +237,18 @@ footer {
   bottom: 0%;
   margin-bottom: 30px;
 }
+
+.highcharts-container {
+  max-height: 40vh;
+}
+
+input,
+select {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #000000;
+  font-size: 1.2em;
+  font-family: Agrandir;
+}
