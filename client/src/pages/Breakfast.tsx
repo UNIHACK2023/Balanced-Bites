@@ -8,7 +8,7 @@ import info from '../assets/whiteinfo.png';
 import logo from '../assets/thicklogo.png';
 import FormPage from '../components/FormPage';
 
-const Landing = () => {
+const Breakfast = () => {
   return (
     <div className='page'>
       <div>
@@ -48,4 +48,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default Breakfast;
