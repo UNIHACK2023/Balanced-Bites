@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import logo from '../assets/thicklogo.png';
 import Credits from '../components/Credits';
+import InfoModal from '../components/InfoModal';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsMore from 'highcharts/highcharts-more';
@@ -68,8 +69,21 @@ const Landing = () => {
     return () => clearInterval(interval);
   }, [setData]);
 
+  const [showModal, setShowModal] = React.useState(false);
+  const handleOpen = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   return (
     <div className='page'>
+      <InfoModal open={showModal} handleClose={handleClose}>
+        <h1>Credits</h1>
+        <h2>Team members</h2>
+        <p>NAME | ROLE | GITHUB/LINKEDIN</p>
+        <h2>Tech Stack</h2>
+        <p>SECTION | TECHNOLOGY</p>
+        <h2>Data sources</h2>
+        <p>SOURCE | LINK</p>
+      </InfoModal>
       <div style={{display: 'flex'}}>
         <div className="row-container left">
           <div className="row-image1"></div>
@@ -80,7 +94,7 @@ const Landing = () => {
       </div>
       <div className='container'>
         <div className='top-bar'>
-          <img src={info} className='info' />
+          <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
           <img src={logo} className='logo' />

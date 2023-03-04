@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
@@ -8,10 +9,19 @@ import pear from '../assets/pear.png';
 import streak from '../assets/meat_on_bone.png';
 import cheese from '../assets/cheese.png';
 import rice from '../assets/rice.png';
+import InfoModal from '../components/InfoModal';
 
 const Dinner = () => {
+  const [showModal, setShowModal] = React.useState(false);
+  const handleOpen = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   return (
     <div className='page'>
+      <InfoModal open={showModal} handleClose={handleClose}>
+        <h1>Lunch</h1>
+        <p>TODO</p>
+      </InfoModal>
       <div style={{display: 'flex'}}>
         <div className="row-container left">
           <div className="row-image1"></div>
@@ -22,7 +32,7 @@ const Dinner = () => {
       </div>
       <div className='container'>
         <div className='top-bar'>
-          <img src={info} className='info' />
+          <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
           <img src={dinner} className='logo' />

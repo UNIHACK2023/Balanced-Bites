@@ -9,14 +9,19 @@ import toast from '../assets/toast.png';
 import milk from '../assets/milk.png';
 import apple from '../assets/red_apple.png';
 import breakfast from '../assets/breakfast.png';
+import InfoModal from '../components/InfoModal';
 
 const Breakfast = () => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [showModal, setShowModal] = React.useState(false);
+  const handleOpen = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
 
   return (
     <div className='page'>
+      <InfoModal open={showModal} handleClose={handleClose}>
+        <h1>Breakfast</h1>
+        <p>TODO</p>
+      </InfoModal>
       <div style={{display: 'flex'}}>
         <div className="row-container left">
           <div className="row-image1"></div>

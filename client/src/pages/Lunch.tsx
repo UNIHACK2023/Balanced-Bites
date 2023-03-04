@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
@@ -8,10 +9,19 @@ import tangerine from '../assets/tangerine.png';
 import burger from '../assets/burger.png';
 import cheese from '../assets/cheese.png';
 import poultry from '../assets/poultry_leg.png';
+import InfoModal from '../components/InfoModal';
 
 const Lunch = () => {
+  const [showModal, setShowModal] = React.useState(false);
+  const handleOpen = () => setShowModal(true);
+  const handleClose = () => setShowModal(false);
+
   return (
     <div className='page'>
+      <InfoModal open={showModal} handleClose={handleClose}>
+        <h1>Lunch</h1>
+        <p>TODO</p>
+      </InfoModal>
       <div style={{display: 'flex'}}>
         <div className="row-container left">
           <div className="row-image1"></div>
@@ -22,7 +32,7 @@ const Lunch = () => {
       </div>
       <div className='container'>
         <div className='top-bar'>
-          <img src={info} className='info' />
+          <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
           <img src={lunch} className='logo' />
