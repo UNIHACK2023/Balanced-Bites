@@ -62,7 +62,7 @@ const Landing = () => {
         data: series.data.map((value: any) => 5 * (Math.random() * 2))
       }));
       setData(newData);
-    }, 1000);
+    }, Math.floor(Math.random() * (1001) + 1500));
     return () => clearInterval(interval);
   }, [setData]);
 
