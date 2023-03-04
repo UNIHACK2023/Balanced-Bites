@@ -27,21 +27,31 @@ type FormData = {
 };
 
 const FormPage = (props: customiseForm) => {
-  const [formData, setFormData] = React.useState<FormData>(
-    JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
+  let d = new Date().setHours(0, 0, 0, 0);
+  let key = d.toString();
+
+  const [formData, setFormData] = React.useState(
+    JSON.parse(localStorage.getItem(key) || '{"breakfast": {}, "lunch": {}, "dinner": {}}')
   );
+
+  const [formDates, setFormDates] = React.useState(JSON.parse(localStorage.getItem('formDates') || '[]'));
+  if (!formDates.includes(key)) {
+    setFormDates([...formDates, key]);
+  }
 
   const handleChange = (e: Event, value: number | number[]) => {
     const target = e.target as HTMLInputElement;
     const { name } = target;
-    console.log(name, value)
-    // @ts-ignore
     setFormData({ ...formData, [props.title.toLowerCase()]: { ...formData[props.title.toLowerCase()], [name]: value } });
   };
 
   React.useEffect(() => {
-    localStorage.setItem('formData', JSON.stringify(formData));
+    localStorage.setItem(key, JSON.stringify(formData));
   }, [formData]);
+
+  React.useEffect(() => {
+    localStorage.setItem('formDates', JSON.stringify(formDates));
+  }, [formDates]);
 
   return (
     <div>
