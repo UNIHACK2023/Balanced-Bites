@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Agrandir;
+  src: url('./fonts/Agrandir-Regular.otf') format('opentype');
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,6 +9,7 @@ body {
   background: #f1f1ef;
   max-height: 1vh;
   overflow: hidden;
+  font-family: Agrandir;
 }
 
 #root {
@@ -42,7 +47,6 @@ button {
 }
 
 hr {
-  margin-top: 30px;
   border: none;
   height: 3px;
   color: #000000;

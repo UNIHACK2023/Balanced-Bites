@@ -45,7 +45,7 @@ const Landing = () => {
     plotOptions: {
       packedbubble: {
         minSize: '5%',
-        maxSize: '100%',
+        maxSize: '120%',
         enableMouseTracking: false,
         zMin: 0,
         zMax: 20,
@@ -86,7 +86,8 @@ const Landing = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1>Credits</h1>
+        <h1 style={{ textAlign: 'right' }}>CREDITS</h1>
+        <hr />
         <h2>Team members</h2>
         <p>NAME | ROLE | GITHUB/LINKEDIN</p>
         <h2>Tech Stack</h2>
@@ -109,10 +110,14 @@ const Landing = () => {
         <div className='main-text'>
           <img src={logo} className='logo' />
           <h3>
-            Learn about your gut biome diversity through fun and funky
-            visualisations! A healthy diet is essential for good health and
-            nutrition. It protects you against many chronic noncommunicable
-            diseases, such as heart disease, diabetes and cancer.{' '}
+            <u>
+              {' '}
+              ✦ Learn about your gut biome diversity through fun and bubbly
+              visualisations! ✦
+            </u>
+            <br />A healthy diet protects you against many chronic
+            noncommunicable diseases, such as heart disease, diabetes and
+            cancer.
           </h3>
           <div id='highcharts-container'>
             <HighchartsReact highcharts={Highcharts} options={options} />
