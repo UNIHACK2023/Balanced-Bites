@@ -25,7 +25,7 @@ const Lunch = () => {
                 <u>didn't eat</u>
               </button>
             </Link>
-            <Link to='/results'>
+            <Link to='/dinner'>
               <button className='purple-button'>continue</button>
             </Link>
           </div>

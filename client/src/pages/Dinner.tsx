@@ -20,7 +20,7 @@ const Dinner = () => {
         <div className='main-text'>
           <FormPage title='Dinner' description='How do you like your dinner?' />
           <div className='button-group'>
-            <Link to='/lunch'>
+            <Link to='/results'>
               <button className='transparent-button'>
                 <u>didn't eat</u>
               </button>
