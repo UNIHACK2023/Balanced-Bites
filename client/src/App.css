@@ -101,6 +101,7 @@ footer {
 
 .slider-row {
   display: flex;
+  align-items: center;
 }
 
 .food-icon {
@@ -117,4 +118,7 @@ footer {
 
 .slider-box {
   display: inline-flex;
+}
+
+.food-slider {
 }
