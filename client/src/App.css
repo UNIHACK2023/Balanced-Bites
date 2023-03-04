@@ -3,6 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: #f1f1ef;
+  max-height: 1vh;
+  overflow: hidden;
 }
 
 button {
@@ -18,9 +20,10 @@ button {
 
 .container {
   max-width: 960px;
+  max-height: 450px;
   justify-content: center;
   border: 3px solid #000000;
-  margin: 50px 10px;
+  margin: 20px 10px;
 }
 
 .page {
@@ -39,7 +42,7 @@ hr {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 20px;
+  padding: 15px;
   background-color: #000000;
 }
 
@@ -62,4 +65,16 @@ hr {
 
 h3 {
   text-align: center;
+}
+
+.row {
+  width: 90px;
+  margin: 0 5px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding-bottom: 8px;
 }

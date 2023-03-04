@@ -10,8 +10,8 @@ import logo from '../assets/thicklogo.png';
 const Landing = () => {
   return (
     <div className='page'>
-      <img src={row1} />
-      <img src={row2} />
+      <img src={row1} className='row' />
+      <img src={row2} className='row' />
       <div className='container'>
         <div className='top-bar'>
           <img src={info} className='info' />
@@ -19,18 +19,22 @@ const Landing = () => {
         <div className='main-text'>
           <img src={logo} className='logo' />
           <h3>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.{' '}
+            Learn about your gut biome diversity through fun and funky
+            visualisations! A healthy diet is essential for good health and
+            nutrition. It protects you against many chronic noncommunicable
+            diseases, such as heart disease, diabetes and cancer.{' '}
           </h3>
           <Link to='/breakfast'>
             <button className='purple-button'>Let's get started</button>
           </Link>
+          <footer>
+            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
+            link | UNIHACK 2023
+          </footer>
         </div>
       </div>
-      <img src={row3} />
-      <img src={row4} />
+      <img src={row3} className='row' />
+      <img src={row4} className='row' />
     </div>
   );
 };
