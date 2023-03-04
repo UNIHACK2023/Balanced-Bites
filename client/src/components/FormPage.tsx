@@ -5,6 +5,11 @@ import Box from '@mui/material/Box';
 interface customiseForm {
   title: "Breakfast" | "Lunch" | "Dinner";
   description: string;
+  vegetable_image?: string;
+  protein_image?: string;
+  grain_image?: string;
+  dairy_image?: string;
+  fruit_image?: string;
 }
 
 type MealData = {
@@ -40,14 +45,27 @@ const FormPage = (props: customiseForm) => {
 
   return (
     <div>
-      <h1>{props.title}</h1>
-      <h2>{props.description}</h2>
       <Box sx={{ width: 250 }}>
-        <Slider name="vegetable" defaultValue={0} max={5} onChange={handleChange} />
+        <div className='slider-row'>
+          <img src={props.vegetable_image} className="food-icon" />
+          <Slider name="vegetable" defaultValue={0} max={5} onChange={handleChange} />
+        </div>
+        <div className='slider-row'>
+        <img src={props.fruit_image} className="food-icon" />
         <Slider name="fruit" defaultValue={0} max={5} onChange={handleChange} />
+        </div>
+        <div className='slider-row'>
+        <img src={props.grain_image} className="food-icon" />
         <Slider name="grain" defaultValue={0} max={5} onChange={handleChange} />
+        </div>
+        <div className='slider-row'>
+        <img src={props.protein_image} className="food-icon" />
         <Slider name="meat" defaultValue={0} max={5} onChange={handleChange} />
+        </div>
+        <div className='slider-row'>
+        <img src={props.dairy_image} className="food-icon" />
         <Slider name="dairy" defaultValue={0} max={5} onChange={handleChange} />
+        </div>
       </Box>
     </div>
   );

@@ -5,8 +5,13 @@ import row2 from '../assets/row2.png';
 import row3 from '../assets/row3.png';
 import row4 from '../assets/row4.png';
 import info from '../assets/whiteinfo.png';
-import logo from '../assets/thicklogo.png';
 import FormPage from '../components/FormPage';
+import broccolli from '../assets/broccolli.png';
+import egg from '../assets/sunnyside_egg.png';
+import toast from '../assets/toast.png';
+import milk from '../assets/milk.png';
+import apple from '../assets/red_apple.png';
+import breakfast from '../assets/breakfast.png';
 
 const Breakfast = () => {
   return (
@@ -20,9 +25,15 @@ const Breakfast = () => {
           <img src={info} className='info' />
         </div>
         <div className='main-text'>
+          <img src={breakfast} className='logo' />
           <FormPage
             title='Breakfast'
             description='How do you like your breakfast?'
+            vegetable_image={broccolli}
+            protein_image={egg}
+            grain_image={toast}
+            dairy_image={milk}
+            fruit_image={apple}
           />
           <div className='button-group'>
             <Link to='/lunch'>

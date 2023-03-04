@@ -5,6 +5,13 @@ import row3 from '../assets/row3.png';
 import row4 from '../assets/row4.png';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
+import dinner from '../assets/dinner.png';
+
+import carrot from '../assets/carrot.png';
+import pear from '../assets/pear.png';
+import streak from '../assets/meat_on_bone.png';
+import cheese from '../assets/cheese.png';
+import rice from '../assets/rice.png';
 
 const Dinner = () => {
   return (
@@ -18,7 +25,16 @@ const Dinner = () => {
           <img src={info} className='info' />
         </div>
         <div className='main-text'>
-          <FormPage title='Dinner' description='How do you like your dinner?' />
+          <img src={dinner} className='logo' />
+          <FormPage
+            title='Dinner'
+            description='How do you like your dinner?'
+            vegetable_image={carrot}
+            protein_image={streak}
+            grain_image={rice}
+            dairy_image={cheese}
+            fruit_image={pear}
+          />
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>
@@ -26,7 +42,7 @@ const Dinner = () => {
               </button>
             </Link>
             <Link to='/results'>
-              <button className='purple-button'>continue</button>
+              <button className='purple-button'>finish</button>
             </Link>
           </div>
           <footer>

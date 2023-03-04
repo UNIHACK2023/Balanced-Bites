@@ -5,6 +5,13 @@ import row3 from '../assets/row3.png';
 import row4 from '../assets/row4.png';
 import info from '../assets/whiteinfo.png';
 import FormPage from '../components/FormPage';
+import lunch from '../assets/lunch.png';
+
+import salad from '../assets/green_salad.png';
+import tangerine from '../assets/tangerine.png';
+import burger from '../assets/burger.png';
+import cheese from '../assets/cheese.png';
+import poultry from '../assets/poultry_leg.png';
 
 const Lunch = () => {
   return (
@@ -18,7 +25,16 @@ const Lunch = () => {
           <img src={info} className='info' />
         </div>
         <div className='main-text'>
-          <FormPage title='Lunch' description='How do you like your lunch?' />
+          <img src={lunch} className='logo' />
+          <FormPage
+            title='Lunch'
+            description='How do you like your lunch?'
+            vegetable_image={salad}
+            protein_image={poultry}
+            grain_image={burger}
+            dairy_image={cheese}
+            fruit_image={tangerine}
+          />
           <div className='button-group'>
             <Link to='/dinner'>
               <button className='transparent-button'>
