@@ -56,7 +56,7 @@ const FormPage = (props: customiseForm) => {
 
   return (
     <div>
-      <Box sx={{ width: '50vw' }}>
+      <Box className='food-questions'>
         <div className='slider-row'>
           <img src={props.vegetable_image} className="food-icon" />
           <Slider name="vegetable" className="food-slider" defaultValue={formData[props.title.toLowerCase()].vegetable | 0} max={5} onChange={handleChange} />

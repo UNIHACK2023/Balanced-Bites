@@ -18,6 +18,7 @@ body {
 button {
   cursor: pointer;
 }
+
 .purple-button {
   background-color: #746beb;
   padding: 20px;
@@ -75,6 +76,10 @@ h3 {
   text-align: center;
 }
 
+.food-questions {
+  width: 50vw
+}
+
 .row-container {
   overflow: hidden;
   height: 100vh;
@@ -96,6 +101,10 @@ h3 {
 
   .container {
     width: 100%;
+  }
+
+  .food-questions {
+    width: 80vw
   }
 }
 
