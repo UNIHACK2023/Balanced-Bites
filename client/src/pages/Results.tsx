@@ -1,8 +1,12 @@
 import React, { useEffect } from 'react';
+import row1 from '../assets/row1.png';
+import row2 from '../assets/row2.png';
+import row3 from '../assets/row3.png';
+import row4 from '../assets/row4.png';
+import info from '../assets/whiteinfo.png';
+import { FacebookShareButton, FacebookIcon } from 'react-share';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-
 // Import Highcharts
 import Highcharts from "highcharts";
 import HighchartsReact from 'highcharts-react-official';
@@ -108,6 +112,7 @@ const Results = () => {
     color: '#F0BA69'
   }]);
 
+  
   const options = {
     chart: {
       type: 'packedbubble',
@@ -115,7 +120,8 @@ const Results = () => {
       backgroundColor: 'transparent'
     },
     title: {
-        text: '',
+        text: 'Your cool chart',
+        align: 'left'
     },
     tooltip: {
         useHTML: true,
@@ -123,31 +129,88 @@ const Results = () => {
     },
     plotOptions: {
         packedbubble: {
-            minSize: '100%',
+            minSize: '50%',
             maxSize: '500%',
             zMin: 0,
-            zMax: 1000
+            zMax: 1000,
+            
+            dataLabels: {
+                enabled: true,
+                format: '{point.name}',
+                filter: {
+                    property: 'y',
+                    operator: '>',
+                    value: 250
+                },
+                style: {
+                    color: 'black',
+                    textOutline: 'none',
+                    fontWeight: 'normal'
+                }
+            }
         }
     },
     series: data,
+    exporting: {
+      chartOptions: {
+          plotOptions: {
+              series: {
+                  dataLabels: {
+                      enabled: true
+                  }
+              }
+          }
+      }
+    },
+    navigation: {
+      buttonOptions: {
+          enabled: true
+      }
+    },
     credits: {
       enabled: false
     },
   }
 
+  useEffect(() => {
+    
+  }, [setData]);
   return (
-    <Grid container sx={{height: '100%'}}>
+      <Grid container sx={{height: '100%'}}>
       <Grid xs={7}>
         <Box>
-          <p>TODO</p>
-        </Box>
-      </Grid>
-      <Grid xs={5}>
-        <div style={{width: '100%', height: '100%', backgroundColor: '#D9D9D9', borderStyle: 'none none none double'}}>
-          <p>TODO</p>
+        <div className='main-text'>
+        <div id="container">
+          <HighchartsReact highcharts={Highcharts} options={options} />
         </div>
+        <div> Share your results</div>
+        <div>
+        <FacebookShareButton
+          url={'https://www.example.com'}
+          quote={'Dummy text!'}
+          hashtag="#muo"
+        >
+          <FacebookIcon size={32} round />
+          </FacebookShareButton>
+      </div>
+          <footer>
+            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
+            link | UNIHACK 2023
+          </footer>
+        </div>
+        </Box>
+        </Grid>
+        <Grid xs={5}>
+        <div style={{width: '100%', height: '100%', backgroundColor: '#D9D9D9', borderStyle: 'none none none double'}}>
+          <div>
+            <p>Your Summary</p>
+          </div>
+          <div>
+            <p>Tips & Tricks</p>
+          </div>
+        </div>
+        </Grid>
       </Grid>
-    </Grid>
   )
 }
 
