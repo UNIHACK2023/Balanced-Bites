@@ -12,7 +12,6 @@ HighchartsExporting(Highcharts);
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AiFeedback from '../components/AiFeedback';
-import Tips from '../components/Tips';
 
 const Results = () => {
   const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
@@ -409,7 +408,6 @@ const Results = () => {
           </div>
           <div>
             <h2 className='summary-title'>✳Tips & Tricks✳</h2>
-            <Tips />
             <AiFeedback />
           </div>
         </div>
