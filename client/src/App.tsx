@@ -6,6 +6,7 @@ import Results from './pages/Results';
 import Breakfast from './pages/Breakfast';
 import Lunch from './pages/Lunch';
 import Dinner from './pages/Dinner';
+import AiFeedback from './components/AiFeedback';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path='/lunch' element={<Lunch />} />
         <Route path='/dinner' element={<Dinner />} />
         <Route path='/results' element={<Results />} />
+        <Route path='/ai-feedback' element={<AiFeedback />} />
       </Routes>
     </BrowserRouter>
   );
