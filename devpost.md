@@ -66,6 +66,8 @@ We are super proud of how far we've come in only 48 hours, since we were able to
 
 As our team has a wide variety of skillsets, we learnt that it was very important to leverage these differences. This strategy, alongside effective and regular communication, allowed us to work efficiently and meant the project could be fully deployed.
 
+We learned a bit more perspective on the cost of running services and the importance of keeping efficiency in mind. We had budget limits for both our frontend/backend hosting services as well as the OpenAI API. The OpenAI API specifically provides different models that are more or less efficient in the amount of tokens they consume. This was a small consideration because the quota was plentiful but it was good to be made to consider it.
+
 ## What's next for Balanced Bites
 
 <img src="https://cdn.dribbble.com/users/160641/screenshots/14477570/media/89b37143200c0a153e6b16441b021be1.gif
