@@ -36,24 +36,19 @@ aiFeedbackRouter.get('/', async (req, res) => {
   });
   sortedDiffs.sort((a, b) => Math.abs(a[1]) - Math.abs(b[1]));
 
-  console.log(sortedDiffs);
-
   // converting diffs to chat text. difference of 0 is ignored.
   for (const diff of sortedDiffs) {
     if (diff[1] < 0) {
-      recs.push(
-        'increase ' + diff[0] + ' consumption by a ' + (Math.abs(diff[1]) > 2 ? 'lot' : 'little')
-      );
+      recs.push(diff[0] + ' deficit of ' + (Math.abs(diff[1]) + ` servings`));
     } else if (diff[1] > 0) {
-      recs.push(
-        'reduce ' + diff[0] + ' consumption by a ' + (Math.abs(diff[1]) > 2 ? 'lot' : 'little')
-      );
+      recs.push(diff[0] + ' surplus of ' + (Math.abs(diff[1]) + ` servings`));
     }
   }
 
-  console.log(recs);
-
-  console.log('Prompt: ' + `List 3 single sentence tips to ${recs}.`);
+  if (recs.length == 0) {
+    res.json('Your diet completely matches the recommendations!');
+    return;
+  }
 
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -64,12 +59,7 @@ aiFeedbackRouter.get('/', async (req, res) => {
     messages: [
       {
         role: 'system',
-        content:
-          "You are a helpful assistant with a cheerful and friendly attitude. Don't repeat the question.",
-      },
-      {
-        role: 'user',
-        content: `List 2 single sentence tips to ${recs}.`,
+        content: `You are an AI assistant with a friendly attitude who gives tips on achieving a balanced diet based on the user's surpluses and deficits. Greet the user and explain your purpose. Give 2 single sentence tips to help the user achieve a balanced diet. The user has a ${recs[0]} and a ${recs[1]}. Surpluses should be reduced and deficits should be increased.`,
       },
     ],
   });
