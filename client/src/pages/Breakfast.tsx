@@ -19,7 +19,8 @@ const Breakfast = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1>Breakfast</h1>
+        <h1 style={{ textAlign: 'right' }}>BREAKFAST</h1>
+        <hr />
         <p>TODO</p>
       </InfoModal>
       <div style={{ display: 'flex' }}>

@@ -14,7 +14,8 @@ const NewResults = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1>About</h1>
+        <h1 style={{ textAlign: 'right' }}>RESULTS</h1>
+        <hr />
         <p>TODO</p>
       </InfoModal>
       <div style={{ display: 'flex' }}>

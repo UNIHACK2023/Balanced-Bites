@@ -13,7 +13,8 @@ const Details = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1>Details</h1>
+        <h1 style={{ textAlign: 'right' }}>DETAILS</h1>
+        <hr />
         <p>TODO</p>
       </InfoModal>
       <div style={{ display: 'flex' }}>

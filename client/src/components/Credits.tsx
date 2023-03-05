@@ -21,7 +21,7 @@ const Credits = () => {
                 <hr />
                 <Grid container spacing={2}>
                 <Grid xs={4}>
-                    <h2>Team members</h2>
+                    <h2>Team Members</h2>
                     <TableContainer component={Paper}>
                     <Table aria-label="simple table">
                         <TableHead>
@@ -90,6 +90,10 @@ const Credits = () => {
                             <TableCell>MUI</TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                            <TableCell>External APIs</TableCell>
+                            <TableCell>ChatGPT</TableCell>
+                        </TableRow>
+                        <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Back-end</TableCell>
                             <TableCell>TODO</TableCell>
                         </TableRow>
@@ -102,7 +106,7 @@ const Credits = () => {
                     </TableContainer>
                 </Grid>
                 <Grid xs={4}>
-                    <h2>Data sourcess</h2>
+                    <h2>Data Sourcess</h2>
                     <TableContainer component={Paper}>
                     <Table aria-label="simple table">
                         <TableHead>
