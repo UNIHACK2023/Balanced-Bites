@@ -1,5 +1,5 @@
 const guide = {
-  male: {
+  M: {
     ageLow: {
       vegetable: 6,
       fruit: 2,
@@ -25,7 +25,7 @@ const guide = {
       additional: 2.5,
     },
   },
-  female: {
+  F: {
     ageLow: {
       vegetable: 5,
       fruit: 2,
