@@ -36,44 +36,44 @@ const Lunch = () => {
 
         <ul>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chickpea-and-couscous-salad">
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chickpea-and-couscous-salad" target='_blank'>
             Chickpea and couscous salad
             </a>
           </li>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/vegie-lasagne">
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/vegie-lasagne" target='_blank'>
               Vegie lasagne
             </a>
           </li>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chicken-and-vegie-pie">
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chicken-and-vegie-pie" target='_blank'>
               Chicken and vegie pie
             </a>
           </li>
         </ul>
         <p>
-          Information on food groups and serving sizes has been taken from 
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups"> eatforhealth.gov.au</a>. 
+          Information on food groups and serving sizes has been taken from&nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups" target='_blank'>eatforhealth.gov.au</a>. 
           Serving sizes can be determined by checking product packaging.
         </p>
         <p>
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans" target='_blank'>
             Vegetables and legumes
           </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit" target='_blank'>
             Fruit
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre" target='_blank'>
             Grains
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and" target='_blank'>
             Lean meat, poultry alternatives
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat" target='_blank'>
             Milk, yogurt and alternatives
           </a> 
         </p>
