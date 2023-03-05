@@ -43,13 +43,10 @@ We initially mapped out our userflow on a white board. The design of our app is 
 The app is built in Typescript with Vite, React and OpenAI APIs.
 
 ## Challenges we ran into
+
 In utilising the OpenAI API, we realised that we couldn't implement all the logic on the frontend because our API key would be exposed, even if we don't directly expose our .env data. This was a mandatory security precaution that we had to follow. As such, a backend had to be created and deployed as well. Fortunately, deployment trivial through the use of Railway. The greater issue was just dealing with the extra complexity and bugs/blockers that came with having to manage a backend as well.
 
 Another challenge we noticed with this Hackathon was the act of balancing error mitigation agains the limited time we had. For example, taking the time to set up error loggers and setting up proper dev vs prod environments. For the most part, we tried to invest the least time for the best safety and programming experience we could achieve.
-
-Sharing the chart via social media
-Customised AI outputs
-Participating remote in Sydney
 
 ## Accomplishments that we're proud of
 
@@ -67,4 +64,4 @@ We learnt that is is very important to communicate regularly with all the member
 <img src="https://cdn.dribbble.com/users/160641/screenshots/14477570/media/89b37143200c0a153e6b16441b021be1.gif
 "  width="400">
 
-We aim to incentivise continued use of balanced bite through implenting a calendar feature where user can see a visualisation of their food intake on a calendar. We recognise eating is a very social activity and
+We aim to incentivise continued use of the Balanced Bite app through implenting a calendar feature where user can see a visualisation of their food intake on a calendar. We recognise eating is a very social activity and could love to extend Balanced Bite to to include community features such as leaderboards see how your eating habits are faring compared to your friend and forums to share recipes.
