@@ -80,7 +80,7 @@ const Results = () => {
     },
     tooltip: {
       useHTML: true,
-      pointFormat: '<b>{point.name}</b>',
+      pointFormat: 'This came from <b>{point.name}</b>',
     },
     plotOptions: {
       packedbubble: {
