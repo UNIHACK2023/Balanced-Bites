@@ -20,7 +20,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router": "^6.8.2",
-    "react-router-dom": "^6.8.2"
+    "react-router-dom": "^6.8.2",
+    "react-share": "^4.4.1",
+    "react-tabs": "^6.0.0"
   },
   "devDependencies": {
     "@types/node": "^18.14.6",

@@ -1,149 +1,355 @@
 import React, { useEffect } from 'react';
-import row1 from '../assets/row1.png';
-import row2 from '../assets/row2.png';
-import row3 from '../assets/row3.png';
-import row4 from '../assets/row4.png';
-import info from '../assets/whiteinfo.png';
-
-// Import Highcharts
-import Highcharts from "highcharts";
+import { FacebookShareButton, FacebookIcon } from 'react-share';
+import Grid from '@mui/material/Unstable_Grid2';
+import Box from '@mui/material/Box';
+import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsMore from 'highcharts/highcharts-more';
+import HighchartsExporting from 'highcharts/modules/exporting';
 HighchartsMore(Highcharts);
-
+HighchartsExporting(Highcharts);
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const Results = () => {
-  const [data, setData] = React.useState<any>([{
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
-    color: '#FFEA7B'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
-    color: '#E26B87'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
-    color: '#7098FF'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
-    color: '#BDEC98'
-  }, {
-    data: [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5],
-    color: '#F0BA69'
-  }]);
+  const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
+  const formData = JSON.parse(
+    localStorage.getItem(formDates[formDates.length - 1]) ||
+      '{"breakfast": {}, "lunch": {}, "dinner": {}}'
+  );
+  console.log(formData);
 
-  const formData = JSON.parse(localStorage.getItem('formData') || '{"breakfast": {}, "lunch": {}, "dinner": {}}');
+  const [data, setData] = React.useState<any>([
+    {
+      name: 'Fruit',
+      data: [
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.fruit,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.fruit,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.fruit,
+        },
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.fruit,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.fruit,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.fruit,
+        },
+      ],
+      color: '#746BEB',
+    },
+    {
+      data: [
+        formData.breakfast.fruit / 1000,
+        formData.breakfast.fruit / 1000,
+        formData.breakfast.fruit / 2000,
+        formData.breakfast.fruit / 4000,
+        formData.lunch.fruit / 5000,
+        formData.lunch.fruit / 1000,
+      ],
+      color: '#746BEB',
+    },
+    {
+      name: 'Meat',
+      data: [
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.meat,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.meat,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.meat,
+        },
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.meat,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.meat,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.meat,
+        },
+      ],
+      color: '#A17FBC',
+    },
+    {
+      data: [
+        formData.breakfast.meat / 1000,
+        formData.breakfast.meat / 1000,
+        formData.breakfast.meat / 2000,
+        formData.breakfast.meat / 4000,
+        formData.lunch.meat / 5000,
+        formData.lunch.meat / 1000,
+      ],
+      color: '#A17FBC',
+    },
+    {
+      name: 'Dairy',
+      data: [
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.dairy,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.dairy,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.dairy,
+        },
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.dairy,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.dairy,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.dairy,
+        },
+      ],
+      color: '#7FBC8C',
+    },
+    {
+      data: [
+        formData.breakfast.dairy / 1000,
+        formData.breakfast.dairy / 1000,
+        formData.breakfast.dairy / 2000,
+        formData.breakfast.dairy / 4000,
+        formData.lunch.dairy / 5000,
+        formData.lunch.dairy / 10,
+      ],
+      color: '#7FBC8C',
+    },
+    {
+      name: 'Vegetable',
+      data: [
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.vegetable,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.vegetable,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.vegetable,
+        },
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.vegetable,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.vegetable,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.vegetable,
+        },
+      ],
+      color: '#FFC700',
+    },
+    {
+      name: 'Grain',
+      data: [
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.grain,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.grain,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.grain,
+        },
+        {
+          name: 'Breakfast',
+          value: formData.breakfast.grain,
+        },
+        {
+          name: 'Lunch',
+          value: formData.lunch.grain,
+        },
+        {
+          name: 'Dinner',
+          value: formData.dinner.grain,
+        },
+      ],
+      color: '#3BB3BD',
+    },
+    {
+      data: [
+        formData.breakfast.vegetable / 100,
+        formData.breakfast.vegetable / 1000,
+        formData.breakfast.vegetable / 2000,
+        formData.breakfast.vegetable / 4000,
+        formData.lunch.vegetable / 5000,
+        formData.lunch.vegetable / 10,
+      ],
+      color: '#FFC700',
+    },
+    {
+      data: [
+        formData.breakfast.fruit / 100,
+        formData.breakfast.fruit / 1000,
+        formData.breakfast.fruit / 2000,
+        formData.breakfast.fruit / 4000,
+        formData.lunch.fruit / 5000,
+        formData.lunch.fruit / 10,
+      ],
+      color: '#3BB3BD',
+    },
+  ]);
+
   const options = {
     chart: {
       type: 'packedbubble',
-      height: '70%'
+      height: '80%',
+      backgroundColor: 'transparent',
     },
     title: {
-        text: 'Your cool chart',
-        align: 'left'
+      text: '',
+      align: 'left',
     },
-    tooltip: {
-        useHTML: true,
-        pointFormat: '<b>{point.name}:</b> {point.value}kg Food<sub>s</sub>'
-    },
+    // tooltip: {
+    //   useHTML: true,
+    //   pointFormat: 'There are {point.value} come from <b>{point.name}</b>',
+    // },
     plotOptions: {
-        packedbubble: {
-            minSize: '20%',
-            maxSize: '100%',
-            zMin: 0,
-            zMax: 1000,
-            layoutAlgorithm: {
-                gravitationalConstant: 0.05,
-                splitSeries: true,
-                seriesInteraction: false,
-                dragBetweenSeries: true,
-                parentNodeLimit: true
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}',
-                filter: {
-                    property: 'y',
-                    operator: '>',
-                    value: 250
-                },
-                style: {
-                    color: 'black',
-                    textOutline: 'none',
-                    fontWeight: 'normal'
-                }
-            }
-        }
+      packedbubble: {
+        minSize: '50%',
+        maxSize: '900%',
+        zMin: 0,
+        zMax: 1000,
+
+        dataLabels: {
+          enabled: true,
+          format: '{point.name}',
+          filter: {
+            property: 'y',
+            operator: '>',
+            value: 250,
+          },
+          style: {
+            color: 'black',
+            textOutline: 'none',
+            fontWeight: 'normal',
+          },
+        },
+      },
     },
     series: data,
     exporting: {
       chartOptions: {
-          plotOptions: {
-              series: {
-                  dataLabels: {
-                      enabled: true
-                  }
-              }
-          }
-      }
+        plotOptions: {
+          series: {
+            dataLabels: {
+              enabled: true,
+            },
+          },
+        },
+      },
     },
     navigation: {
       buttonOptions: {
-          enabled: true
-      }
-    }
-  }
+        enabled: true,
+      },
+    },
+    credits: {
+      enabled: false,
+    },
+  };
 
-  useEffect(() => {
-    
-  }, [setData]);
-
-
+  useEffect(() => {}, [setData]);
   return (
-    <div className='page'>
-      <div>
-        <img src={row1} className='row' />
-        <img src={row2} className='row' />
-      </div>
-      <div className='container'>
-        <div className='top-bar'>
-          <img src={info} className='info' />
-        </div>
-        <div className='main-text'>
-        {/* <div>
-          <h1>Results</h1>
-          <h2>Breakfast</h2>
-          <p>Vegetable: {formData.breakfast.vegetable || 0}</p>
-          <p>Fruit: {formData.breakfast.fruit || 0}</p>
-          <p>Grain: {formData.breakfast.grain || 0}</p>
-          <p>Meat: {formData.breakfast.meat || 0}</p>
-          <p>Dairy: {formData.breakfast.dairy || 0}</p>
-          <h2>Lunch</h2>
-          <p>Vegetable: {formData.lunch.vegetable || 0}</p>
-          <p>Fruit: {formData.lunch.fruit || 0}</p>
-          <p>Grain: {formData.lunch.grain || 0}</p>
-          <p>Meat: {formData.lunch.meat || 0}</p>
-          <p>Dairy: {formData.lunch.dairy || 0}</p>
-          <h2>Dinner</h2>
-          <p>Vegetable: {formData.dinner.vegetable || 0}</p>
-          <p>Fruit: {formData.dinner.fruit || 0}</p>
-          <p>Grain: {formData.dinner.grain || 0}</p>
-          <p>Meat: {formData.dinner.meat || 0}</p>
-          <p>Dairy: {formData.dinner.dairy || 0}</p>
-        </div> */}
-        <div id="container">
-          <HighchartsReact highcharts={Highcharts} options={options} />
-        </div>
-          <footer>
-            © 2023 <br /> Carey Luke Larissa Jasmin Wanning <br /> Github repo
-            link | UNIHACK 2023
-          </footer>
-        </div>
-      </div>
-      <div>
-        <img src={row3} className='row' />
-        <img src={row4} className='row' />
-      </div>
-    </div>
-  )
-}
+    <Grid container sx={{ height: '100%' }}>
+      <Grid xs={7}>
+        <Box>
+          <div className='main-text'>
+            <div id='container'>
+              <HighchartsReact highcharts={Highcharts} options={options} />
+            </div>
+            <div> Share your results</div>
+            <div>
+              <FacebookShareButton
+                url={'https://www.example.com'}
+                quote={'Dummy text!'}
+                hashtag='#muo'
+              >
+                <FacebookIcon size={32} round />
+              </FacebookShareButton>
+            </div>
+          </div>
+        </Box>
+      </Grid>
+      <Grid xs={4.8}>
+        <div
+          style={{
+            width: '100%',
+            height: '100%',
+            backgroundColor: '#D9D9D9',
+            borderStyle: 'none none none double',
+            padding: '10px',
+          }}
+        >
+          <div>
+            <h2 className='summary-title'>✧Your Gut Summary✧</h2>
+            <Tabs>
+              <TabList>
+                <Tab>Breakfast</Tab>
+                <Tab>Lunch</Tab>
+                <Tab>Dinner</Tab>
+                <Tab>Snacks</Tab>
+                <Tab>Details</Tab>
+              </TabList>
 
-export default Results
+              <TabPanel>
+                <p>Any content 1</p>
+              </TabPanel>
+              <TabPanel>
+                <h2>Any content 2</h2>
+              </TabPanel>
+            </Tabs>
+          </div>
+          <div>
+            <h2 className='summary-title'>✳Tips & Tricks✳</h2>
+            <p>
+              Here is going to be some tips generated by AI to suggest how you
+              can improve your eating habits and become healthier. It is
+              personalised to your intake and body so you can have a piece of
+              mind that you are eating the right amount of nutrients.
+            </p>
+          </div>
+        </div>
+      </Grid>
+    </Grid>
+  );
+};
+
+export default Results;

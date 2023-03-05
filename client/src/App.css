@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Agrandir;
+  src: url('./fonts/Agrandir-Regular.otf') format('opentype');
+}
 body {
   margin: 0;
   padding: 0;
@@ -5,21 +9,33 @@ body {
   background: #f1f1ef;
   max-height: 1vh;
   overflow: hidden;
+  font-family: Agrandir;
+}
+
+#root {
+  height: 100vh;
+}
+
+.page {
+  height: 100vh;
 }
 
 button {
   cursor: pointer;
 }
+
 .purple-button {
   background-color: #746beb;
+  color: #f1f1ef;
   padding: 20px;
   border: 3px solid black;
-  font-size: large;
+  font-size: x-large;
   font-weight: 400;
 }
 
 .container {
   width: 60%;
+  height: 85vh;
   justify-content: center;
   border: 3px solid #000000;
   margin: 20px 10px;
@@ -31,7 +47,6 @@ button {
 }
 
 hr {
-  margin-top: 30px;
   border: none;
   height: 3px;
   color: #000000;
@@ -64,26 +79,110 @@ hr {
 }
 
 h3 {
+  width: 90%;
   text-align: center;
+  font-size: 2.5vh;
+  margin: 0;
 }
 
-.row {
-  width: 7vmax;
-  margin: 0 5px;
+.food-questions {
+  width: 50vw;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  text-align: center;
-  padding-bottom: 8px;
+.button-group {
+  width: 50vw;
+}
+
+.row-container {
+  overflow: hidden;
+  height: 100vh;
+  width: 122px;
+}
+
+.row-container.left {
+  margin-left: 10px;
+}
+
+.row-container.right {
+  margin-right: 10px;
+}
+
+@media all and (max-width: 480px) {
+  .row-container {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .food-questions {
+    width: 80vw;
+  }
+
+  .button-group {
+    width: 80vw;
+  }
+}
+
+@media all and (max-width: 1280px) {
+  .row-container.inner {
+    display: none;
+  }
+}
+
+.row-image1 {
+  --imageHeight: 2147px;
+  background: url('./assets/row1.png') repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-up 40s linear infinite;
+}
+
+.row-image2 {
+  --imageHeight: 2147px;
+  background: url('./assets/row2.png') repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-down 40s linear infinite;
+}
+
+.row-image3 {
+  --imageHeight: 2147px;
+  background: url('./assets/row3.png') repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-down 40s linear infinite;
+}
+
+.row-image4 {
+  --imageHeight: 2147px;
+  background: url('./assets/row4.png') repeat-y;
+  height: calc(var(--imageHeight) * 2);
+  animation: slide-up 40s linear infinite;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(calc(var(--imageHeight) * -1));
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(calc(var(--imageHeight) * -1));
+  }
+  to {
+    transform: translateY(0px);
+  }
 }
 
 .transparent-button {
   background-color: transparent;
-  padding: 20px;
+  padding: 50px 0px;
   border: none;
-  font-size: large;
+  font-size: xx-large;
   font-weight: 400;
   color: #3f3f3f;
 }
@@ -92,7 +191,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
 }
 
 .emoji {
@@ -101,12 +199,21 @@ footer {
 
 .slider-row {
   display: flex;
+  align-items: center;
+  height: 80px;
 }
 
 .food-icon {
-  width: 30px;
+  width: 60px;
   margin: 0 5px;
   padding-right: 20px;
+}
+
+.food-count {
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0 5px;
+  padding-left: 20px;
 }
 
 .icons {
@@ -117,4 +224,39 @@ footer {
 
 .slider-box {
   display: inline-flex;
+}
+
+.page-message {
+  text-align: center;
+  margin-top: 0px;
+  font-size: 2.5vh;
+}
+
+footer {
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+  margin-bottom: 30px;
+}
+
+.highcharts-container {
+  max-height: 40vh;
+}
+
+input,
+select {
+  width: 70%;
+  padding: 15px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #000000;
+  font-size: 1.3em;
+  font-family: Agrandir;
+}
+
+.summary-title {
+  border: #000000 2px solid;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
 }
