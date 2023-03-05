@@ -16,11 +16,13 @@ We saw a gap in the education and awareness in eating well and hence built Balan
 
 ## What it does
 
+![Landing](https://github.com/UNIHACK2023/UNIHACK-23/blob/main/landing.gif)
+
 BalancedBites is a gut biome visualiser that gives users a snapshot of everything that they've eaten in a day. Our website interface is easy to use, and it takes less than a minute to record your information and generate a bubble map of your food intake. The goal is to eat a diverse variety of foods across the different food groups
 
 ## How we built it
 
-The app i
+<img src="https://media.tenor.com/PwEIXSJWhsQAAAAd/build-lego.gif"  width="400">
 
 ### 1. Brainstorming 🧠
 
@@ -38,21 +40,28 @@ We initially mapped out our userflow on a white board. The design of our app is 
 
 ### 4. Development 💻
 
+The app is built in Typescript with Vite, React and OpenAI APIs.
+
 ## Challenges we ran into
 
-Sharing the chart via social media
-Customised AI outputs
-Participating remote in Sydney
+In utilising the OpenAI API, we realised that we couldn't implement all the logic on the frontend because our API key would be exposed, even if we don't directly expose our .env data. This was a mandatory security precaution that we had to follow. As such, a backend had to be created and deployed as well. Fortunately, deployment trivial through the use of Railway. The greater issue was just dealing with the extra complexity and bugs/blockers that came with having to manage a backend as well.
+
+Another challenge we noticed with this Hackathon was the act of balancing error mitigation agains the limited time we had. For example, taking the time to set up error loggers and setting up proper dev vs prod environments. For the most part, we tried to invest the least time for the best safety and programming experience we could achieve.
 
 ## Accomplishments that we're proud of
+
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f55a3054259101.5953e4f53ef53.gif"  width="400">
 
 We're immensely proud of Balanced Bites that aims to make a tangible positive impact by raising awareness on healthy eating.
 We are super proud of how far we've come in only 48 hours! We were able to get the app completely functional and deployed!
 
 ## What we learned
 
-We learnt that is is very impor
+We learnt that is is very important to communicate regularly with all the members what we will be doing to optimise our different skills
 
 ## What's next for Balanced Bites
 
-We aim to incentivise continued use of balanced bite through implenting a calendar feature where user can see a visualisation of their food intake on a calendar. We recognise eating is a very social activity and
+<img src="https://cdn.dribbble.com/users/160641/screenshots/14477570/media/89b37143200c0a153e6b16441b021be1.gif
+"  width="400">
+
+We aim to incentivise continued use of the Balanced Bite app through implenting a calendar feature where user can see a visualisation of their food intake on a calendar. We recognise eating is a very social activity and could love to extend Balanced Bite to to include community features such as leaderboards see how your eating habits are faring compared to your friend and forums to share recipes.
