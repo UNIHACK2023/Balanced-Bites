@@ -16,7 +16,30 @@ const NewResults = () => {
       <InfoModal open={showModal} handleClose={handleClose}>
         <h1 style={{ textAlign: 'right' }}>RESULTS</h1>
         <hr />
-        <p>TODO</p>
+        <p>
+          This is where you can see your custom data visualisation. Each of the 
+          circles represents a different food group. Hover over the circles for 
+          more information!
+        </p>
+        <p>
+          The side panel to the right shows you a summary your nutritional intake 
+          for the day based on the five food groups.
+        </p>
+        <p>
+          The 'Tips & Tricks' section is AI powered through ChatGPT to give you 
+          personalised tips to have a more balanced diet. For example, if your 
+          daily intake is lacking dairy compared to the average, your tips might 
+          suggest greater consumption of some foods high in calcium.
+        </p>
+        <p>
+          <b>Note that this website does not provide medical advice. </b>
+          The information and material contained on this website are for educational 
+          purposes only. No material on this site is intended to be a substitute for 
+          professional medical advice, diagnosis or treatment. Always seek the advice 
+          of your physician or other qualified health care provider with any questions 
+          you may have, and never disregard professional medical advice or delay in 
+          seeking it because of something you have read on this website.
+        </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>

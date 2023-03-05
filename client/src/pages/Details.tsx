@@ -35,9 +35,20 @@ const Details = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1 style={{ textAlign: 'right' }}>DETAILS</h1>
+        <h1 style={{ textAlign: 'right' }}>ABOUT YOU</h1>
         <hr />
-        <p>TODO</p>
+        <p>
+          Why do we ask for this information?
+        </p>
+        <p>
+          This information is used for the sole purpose of comparing your dietary 
+          intake with the average for your age, sex, height and weight to give 
+          you more personalised results and more relevant tips.
+        </p>
+        <p>
+          We do not store your information in any way, and you may choose to 
+          skip this page and continue on to see your personalised data visualisation.
+        </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>
