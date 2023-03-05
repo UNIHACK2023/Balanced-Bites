@@ -212,11 +212,11 @@ const Results = () => {
 
       try {
         if (!navigator.canShare(data2)) {
-          console.error("Can't share");
+          window.alert("Your device doesn't support sharing files.");
         }
         await navigator.share(data2);
       } catch (err) {
-        console.error(err);
+        window.alert("Your device doesn't support sharing files.");
       }
     };
     req();
