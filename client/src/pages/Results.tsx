@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { FacebookShareButton, FacebookIcon } from 'react-share';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
-// Import Highcharts
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsMore from 'highcharts/highcharts-more';
