@@ -47,6 +47,12 @@ To effectively communicate to all our engineers the plan of what was to be built
 
 The app is built in Typescript with Vite, React and OpenAI APIs. The frontend is styled with MUI, emotion and ALOT of custom css to improve the responsivity of the app. The backend server that fetches from OpenAI APIs is written in javascript and uses Express, Axios and Morgan.
 
+We used React Router to handle the user navigation creating a landing page which would introduce the user to our website showcasing the innovative gut biome diversity visualiser which features real data from the Australian Department of Health. This graph was created using the Highcharts graphing library and building on the packed bubble chart design.
+
+The user is guided to the next pages where they can enter information regarding their servings of each food type for breakfast, lunch, and dinner. These pages feature a large common codebase which we moved to a dedicated file. We used custom icons for each meal type along with info popups to clarify which foods fall into which category. This data is saved in localStorage each day with the potential to be linked to a user account in future.
+
+Once we have collected the meal data we optionally accept specific user information to further customise our ChatGPT AI driven insights. The results page is split into two sections showing both the detailed breakdown of consumption and reccomended guidlines and AI suggestions along with a customised chart. This chart can be shared to social media.
+
 ## Challenges we ran into
 
 <img src="https://cdn.dribbble.com/users/566817/screenshots/5888744/climb_dribbble.gif"  width="400">
