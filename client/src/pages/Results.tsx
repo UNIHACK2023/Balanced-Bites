@@ -12,6 +12,7 @@ HighchartsExporting(Highcharts);
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AiFeedback from '../components/AiFeedback';
+import { truncate } from 'fs/promises';
 
 const Results = () => {
   const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
@@ -93,7 +94,7 @@ const Results = () => {
     series: data,
     navigation: {
       buttonOptions: {
-        enabled: false,
+        enabled: true,
       },
     },
     credits: {
@@ -170,6 +171,10 @@ const Results = () => {
                   🍅 <strong>Dinner:</strong> {formData.dinner.vegetable}{' '}
                   servings
                 </p>
+                <p>
+                  🟰 <strong>Total:</strong> {formData.dinner.vegetable + formData.lunch.vegetable + formData.breakfast.vegetable}{' '}
+                  servings <i>(Human Average Vegetable Intake is 5.3 Servings per day)</i>
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your fruit intake for today:</p>
@@ -182,6 +187,10 @@ const Results = () => {
                 </p>
                 <p>
                   🥭 <strong>Dinner:</strong> {formData.dinner.fruit} servings
+                </p>
+                <p>
+                  🟰 <strong>Total:</strong> {formData.dinner.fruit + formData.lunch.fruit + formData.breakfast.fruit}{' '}
+                  servings <i>(Human Average Fruit Intake is 2 Servings per day)</i>
                 </p>
               </TabPanel>
               <TabPanel>
@@ -196,6 +205,10 @@ const Results = () => {
                 <p>
                   🍚 <strong>Dinner:</strong> {formData.dinner.grain} servings
                 </p>
+                <p>
+                  🟰 <strong>Total:</strong> {formData.dinner.grain + formData.lunch.grain + formData.breakfast.grain}{' '}
+                  servings <i>(Human Average Grain Intake is 4.9 Servings per day)</i>
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your protein intake for today:</p>
@@ -209,6 +222,10 @@ const Results = () => {
                 <p>
                   🍗 <strong>Dinner:</strong> {formData.dinner.meat} servings
                 </p>
+                <p>
+                  🟰 <strong>Total:</strong> {formData.dinner.meat + formData.lunch.meat + formData.breakfast.meat}{' '}
+                  servings <i>(Human Average Meat Intake is 2.4 Servings per day)</i>
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your dairy intake for today:</p>
@@ -221,6 +238,10 @@ const Results = () => {
                 </p>
                 <p>
                   🥛 <strong>Dinner:</strong> {formData.dinner.dairy} servings
+                </p>
+                <p>
+                  🟰 <strong>Total:</strong> {formData.dinner.dairy + formData.lunch.dairy + formData.breakfast.dairy}{' '}
+                  servings <i>(Human Average Dairy Intake is 3.2 Servings per day)</i>
                 </p>
               </TabPanel>
             </Tabs>
