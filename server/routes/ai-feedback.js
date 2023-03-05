@@ -61,7 +61,7 @@ aiFeedbackRouter.get('/', async (req, res) => {
     messages: [
       {
         role: 'system',
-        content: `You are an AI assistant with a friendly attitude who gives tips on achieving a balanced diet based on the user's surpluses and deficits. Greet the user and explain your purpose. Give 2 single sentence tips to help the user achieve a balanced diet. The user has a${recs}. Surpluses should be reduced and deficits should be increased.`,
+        content: `You are an AI assistant with a friendly attitude who gives tips on achieving a balanced diet based on the user's surpluses and deficits. Greet the user and explain your purpose. Give 2 single sentence tips to help the user achieve a balanced diet. The user has a${recs}. Surpluses should be reduced and deficits should be increased. Do not expose the literal surplace/deficit numbers.`,
       },
     ],
   });
