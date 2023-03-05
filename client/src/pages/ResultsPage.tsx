@@ -4,8 +4,9 @@ import info from '../assets/whiteinfo.png';
 import Credits from '../components/Credits';
 import InfoModal from '../components/InfoModal';
 import about from '../assets/details.png';
+import Results from './Results';
 
-const Details = () => {
+const NewResults = () => {
   const [showModal, setShowModal] = React.useState(false);
   const handleOpen = () => setShowModal(true);
   const handleClose = () => setShowModal(false);
@@ -29,31 +30,7 @@ const Details = () => {
           <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
-          <img src={about} className='logo' />
-          <h1 className='page-message'>
-            ✴Tell us a bit about you! We use these details to personalise your
-            results✴
-            <br />
-            You may skip this if you wish.
-          </h1>
-          <input type='text' placeholder='Age' />
-          <select name='age' id='age'>
-            <option value='Skip'>Sex</option>
-            <option value='Male'>Female</option>
-            <option value='Female'>Male</option>
-          </select>
-          <input type='text' placeholder='Height in cm' />
-          <input type='text' placeholder='Body mass in kg' />
-          <div className='button-group'>
-            <Link to='/results'>
-              <button className='transparent-button'>
-                <u>skip</u>
-              </button>
-            </Link>
-            <Link to='/finalresults'>
-              <button className='purple-button'>finish</button>
-            </Link>
-          </div>
+          <Results />
           <Credits></Credits>
         </div>
       </div>
@@ -69,4 +46,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default NewResults;
