@@ -27,10 +27,11 @@ button {
 .purple-button {
   background-color: #746beb;
   color: #f1f1ef;
-  padding: 20px;
+  padding: 2vh;
   border: 3px solid black;
-  font-size: x-large;
+  font-size: 3vh;
   font-weight: 400;
+  height: 8vh;
 }
 
 .container {
@@ -255,12 +256,18 @@ select {
 }
 
 .summary-title {
-  border: #000000 2px solid;
-  padding: 20px;
+  border: #000000 2.5px solid;
+  padding: 0.5vh;
   border-radius: 7px;
   text-align: center;
+  font-size: 3vh;
 }
 
 .share-box {
   padding-top: 20px;
+}
+
+.divider {
+  width: 50px;
+  overflow: hidden;
 }
