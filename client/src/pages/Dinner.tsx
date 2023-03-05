@@ -21,7 +21,60 @@ const Dinner = () => {
       <InfoModal open={showModal} handleClose={handleClose}>
         <h1 style={{ textAlign: 'right' }}>DINNER</h1>
         <hr />
-        <p>TODO</p>
+        <p>
+          Round out your day with a hearty and nutritious dinner.
+        </p>
+        <p>
+          Make sure your dinner includes a good mix of vegetables, proteins and carbs
+          to refuel your energy after your busy day.
+        </p>
+        <p>
+          Sick of length dinner prep? Give these quick, delicious dinner recipes a try!
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://www.woolworths.com.au/shop/recipes/quick-roast-pork-with-potato-and-slaw-salad">
+            Quick roast pork with potato and slaw salad
+            </a>
+          </li>
+          <li>
+            <a href="https://www.woolworths.com.au/shop/recipes/quick-beef-korma-with-naan-and-salad">
+              Beef korma with naan and salad
+            </a>
+          </li>
+          <li>
+            <a href="https://www.woolworths.com.au/shop/recipes/easy-spaghetti-marinara">
+              Easy spaghetti marinara
+            </a>
+          </li>
+        </ul>
+        <p>
+          Information on food groups and serving sizes has been taken from 
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups"> eatforhealth.gov.au</a>. 
+          Serving sizes can be determined by checking product packaging.
+        </p>
+        <p>
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">
+            Vegetables and legumes
+          </a>
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">
+            Fruit
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">
+            Grains
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">
+            Lean meat, poultry alternatives
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">
+            Milk, yogurt and alternatives
+          </a> 
+        </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>
@@ -38,9 +91,9 @@ const Dinner = () => {
         <div className='main-text'>
           <img src={dinner} className='logo' />
           <h1 className='page-message'>
-            The most important meal to eat everyday.
+            Round out your day with dinner.
             <br />
-            Make sure to eat breakfast everyday.
+            Make sure to eat dinner everyday.
           </h1>
           <FormPage
             title='Dinner'
