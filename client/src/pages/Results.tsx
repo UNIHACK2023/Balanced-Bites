@@ -336,33 +336,69 @@ const Results = () => {
 
               <TabPanel>
                 <p>Here is a summary of your veggie intake for today:</p>
-                <p>🌽 Breakfast: {formData.breakfast.vegetable} servings</p>
-                <p>🥕 Lunch: {formData.lunch.vegetable} servings</p>
-                <p>🍅 Dinner: {formData.dinner.vegetable} servings</p>
+                <p>
+                  🌽 <strong>Breakfast:</strong> {formData.breakfast.vegetable}{' '}
+                  servings
+                </p>
+                <p>
+                  🥕 <strong>Lunch:</strong> {formData.lunch.vegetable} servings
+                </p>
+                <p>
+                  🍅 <strong>Dinner:</strong> {formData.dinner.vegetable}{' '}
+                  servings
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your fruit intake for today:</p>
-                <p>Breakfast: {formData.breakfast.fruit} servings</p>
-                <p>Lunch: {formData.lunch.fruit} servings</p>
-                <p>Dinner: {formData.dinner.fruit} servings</p>
+                <p>
+                  🍓 <strong>Breakfast:</strong> {formData.breakfast.fruit}{' '}
+                  servings
+                </p>
+                <p>
+                  🍒 <strong>Lunch:</strong> {formData.lunch.fruit} servings
+                </p>
+                <p>
+                  🥭 <strong>Dinner:</strong> {formData.dinner.fruit} servings
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your grain intake for today:</p>
-                <p>Breakfast: {formData.breakfast.grain} servings</p>
-                <p>Lunch: {formData.lunch.grain} servings</p>
-                <p>Dinner: {formData.dinner.grain} servings</p>
+                <p>
+                  🥐 <strong>Breakfast:</strong> {formData.breakfast.grain}{' '}
+                  servings
+                </p>
+                <p>
+                  🍞 <strong>Lunch:</strong> {formData.lunch.grain} servings
+                </p>
+                <p>
+                  🍚 <strong>Dinner:</strong> {formData.dinner.grain} servings
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your protein intake for today:</p>
-                <p>Breakfast: {formData.breakfast.meat} servings</p>
-                <p>Lunch: {formData.lunch.meat} servings</p>
-                <p>Dinner: {formData.dinner.meat} servings</p>
+                <p>
+                  🍳 <strong>Breakfast:</strong> {formData.breakfast.meat}{' '}
+                  servings
+                </p>
+                <p>
+                  🥩 <strong>Lunch:</strong> {formData.lunch.meat} servings
+                </p>
+                <p>
+                  🍗 <strong>Dinner:</strong> {formData.dinner.meat} servings
+                </p>
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of your dairy intake for today:</p>
-                <p>Breakfast: {formData.breakfast.dairy} servings</p>
-                <p>Lunch: {formData.lunch.dairy} servings</p>
-                <p>Dinner: {formData.dinner.dairy} servings</p>
+                <p>
+                  🥣 <strong>Breakfast:</strong> {formData.breakfast.dairy}{' '}
+                  servings
+                </p>
+                <p>
+                  🧀 <strong>Lunch:</strong> {formData.lunch.dairy} servings
+                </p>
+                <p>
+                  🥛 <strong>Dinner:</strong> {formData.dinner.dairy} servings
+                </p>
               </TabPanel>
             </Tabs>
           </div>
