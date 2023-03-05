@@ -17,6 +17,11 @@ We saw a gap in the education and awareness in eating well and hence built Balan
 | Clean Energy                                                                                                                                                                                                                   | Quality Education                                                                                                                                                                                                                                                    | Responsible Consumption                                                                                                                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [![3. Good Helath and Well-Being](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-03.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/energy/) | [![4. Responsible Consumption & Production](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-04.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/sustainable-consumption-production/) | [![12. Responsible Consumption](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-12.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/climate-change/) |
+<<<<<<< HEAD
+
+=======
+| - TODO<br/>- TODO                                                                                                                                                                                                              | - TODO<br/>-TODO                                                                                                                                                                                                                                                     | - TODO<br/>- TODO                                                                                                                                                                                                                    |
+>>>>>>> d46dadf6a9ba8e3179f4cee42fedddd04e89338f
 
 ## What it does
 
@@ -34,11 +39,9 @@ We wanted to make a positive impact on the lives of people in our community, so 
 
 ### 2. Research 🧪
 
-<<<<<<< HEAD
-We wanted our app Balanced Bites to be credible and scientifically backed and we tasked our analysts to find suggested food intakes for various demographics and scientific tips to improve ones diet. To inform our design we further researched competitior apps in the market to see what could be improved and what features were helpful to include and came up with our requirements list.
-=======
+We wanted our app Balanced Bites to be credible and scientifically backed and we tasked our analysts to reasearch scientific tips to improve ones diet. To inform our design we further researched competitior apps in the market to see what could be improved and what features were helpful to include and came up with our requirements list.
+
 To ensure Balanced Bites provided credible and scientifically backed advice, we tasked our Research Team with finding relevant serving recommendations. To inform our design we further researched how different demographics sometimes required different serving sizes and intakes.
->>>>>>> d46dadf6a9ba8e3179f4cee42fedddd04e89338f
 
 ### 3. Wireframing & Prototyping ✏️
 
