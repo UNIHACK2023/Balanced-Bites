@@ -7,6 +7,14 @@ import InfoModal from '../components/InfoModal';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import HighchartsMore from 'highcharts/highcharts-more';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Unstable_Grid2';
 HighchartsMore(Highcharts);
 
 const Landing = () => {
@@ -86,14 +94,9 @@ const Landing = () => {
   return (
     <div className='page'>
       <InfoModal open={showModal} handleClose={handleClose}>
-        <h1 style={{ textAlign: 'right' }}>CREDITS</h1>
+        <h1 style={{ textAlign: 'right' }}>BALANCED BITES</h1>
         <hr />
-        <h2>Team members</h2>
-        <p>NAME | ROLE | GITHUB/LINKEDIN</p>
-        <h2>Tech Stack</h2>
-        <p>SECTION | TECHNOLOGY</p>
-        <h2>Data sourcess</h2>
-        <p>SOURCE | LINK</p>
+        <p>TODO</p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>
