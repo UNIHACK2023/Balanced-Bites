@@ -22,60 +22,87 @@ const Lunch = () => {
         <h1 style={{ textAlign: 'right' }}>LUNCH</h1>
         <hr />
         <p>
-          Avoid the midday slump by eating a nutritious lunch to keep your metabolism active
-          and give you energy to power through the day.
+          Avoid the midday slump by eating a nutritious lunch to keep your
+          metabolism active and give you energy to power through the day.
         </p>
         <p>
-          When packing or buying your lunch, make sure it contains a mix of 
-          healthy carbs to feed your brain, protein to keep you full and plenty 
+          When packing or buying your lunch, make sure it contains a mix of
+          healthy carbs to feed your brain, protein to keep you full and plenty
           of fruits and veggies to hit your daily nutrition intake goals.
         </p>
-        <p>
-          Don't know what to eat? Give these prepare ahead recipes a try!
-        </p>
+        <p>Don't know what to eat? Give these prepare ahead recipes a try!</p>
 
         <ul>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chickpea-and-couscous-salad" target='_blank'>
-            Chickpea and couscous salad
+            <a
+              href='https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chickpea-and-couscous-salad'
+              target='_blank'
+            >
+              Chickpea and couscous salad
             </a>
           </li>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/vegie-lasagne" target='_blank'>
+            <a
+              href='https://www.eatforhealth.gov.au/eating-well/healthy-recipes/vegie-lasagne'
+              target='_blank'
+            >
               Vegie lasagne
             </a>
           </li>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chicken-and-vegie-pie" target='_blank'>
+            <a
+              href='https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chicken-and-vegie-pie'
+              target='_blank'
+            >
               Chicken and vegie pie
             </a>
           </li>
         </ul>
         <p>
           Information on food groups and serving sizes has been taken from&nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups" target='_blank'>eatforhealth.gov.au</a>. 
-          Serving sizes can be determined by checking product packaging.
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups'
+            target='_blank'
+          >
+            eatforhealth.gov.au
+          </a>
+          . Serving sizes can be determined by checking product packaging.
         </p>
         <p>
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans'
+            target='_blank'
+          >
             Vegetables and legumes
           </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit'
+            target='_blank'
+          >
             Fruit
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre'
+            target='_blank'
+          >
             Grains
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and'
+            target='_blank'
+          >
             Lean meat, poultry alternatives
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat'
+            target='_blank'
+          >
             Milk, yogurt and alternatives
-          </a> 
+          </a>
         </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
@@ -88,10 +115,10 @@ const Lunch = () => {
       </div>
       <div className='container'>
         <div className='top-bar'>
-          <img src={info} onClick={handleOpen} className='info'/>
+          <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
-          <img src={lunch} className='logo'/>
+          <img src={lunch} className='logo' />
           <h1 className='page-message'>
             Avoid the midday slump.
             <br />
@@ -109,7 +136,7 @@ const Lunch = () => {
             protein_colour='#A17FBC'
             grain_colour='#3BB3BD'
             dairy_colour='#7FBC8C'
-            fruit_colour='#BC7F7F'
+            fruit_colour='#746BEB'
           />
           <div className='button-group'>
             <Link to='/dinner'>
