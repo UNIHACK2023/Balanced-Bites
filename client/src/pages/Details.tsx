@@ -5,8 +5,6 @@ import Credits from '../components/Credits';
 import InfoModal from '../components/InfoModal';
 import about from '../assets/details.png';
 
-
-
 const Details = (props: customiseForm) => {
   const [showModal, setShowModal] = React.useState(false);
   const handleOpen = () => setShowModal(true);
