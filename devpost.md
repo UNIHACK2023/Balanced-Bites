@@ -45,7 +45,7 @@ To effectively communicate to all our engineers the plan of what was to be built
 
 ### 4. Development 💻
 
-The app is built in Typescript with Vite, React and OpenAI APIs. The frontend is styled with MUI, emotion and ALOT of custom css to improve the responsivity of the app. The backend server that fetches from OpenAI APIs is written in javascript and uses Express, Axios and Morgan.
+The app is built in Typescript with Vite, React and OpenAI APIs. The frontend is styled with MUI, emotion and ALOT of custom css to improve the responsivity of the app. The backend server that fetches from OpenAI APIs is written in JavaScript and runs on Express, wrangling data from the frontend to convert into a prompt for the AI to respond to.
 
 ## Challenges we ran into
 
