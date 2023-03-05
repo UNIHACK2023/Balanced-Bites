@@ -12,6 +12,7 @@ HighchartsExporting(Highcharts);
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AiFeedback from '../components/AiFeedback';
+import axios from 'axios';
 
 const Results = () => {
   const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
@@ -93,7 +94,7 @@ const Results = () => {
     series: data,
     navigation: {
       buttonOptions: {
-        enabled: false,
+        enabled: true,
       },
     },
     credits: {
@@ -105,14 +106,44 @@ const Results = () => {
     const interval = setInterval(() => {
       const newData = data.map((series: any) => ({
         ...series,
-        data: series.data.map((value: any) => Math.random()*5 + 1),
+        data: series.data.map((point: any) => ({
+          ...point,
+          value: Math.random() * 5 + 1,
+        })),
       }));
       setData(newData);
     }, Math.floor(Math.random() * 8000 + 4000));
     return () => clearInterval(interval);
   }, [setData]);
 
-  useEffect(() => {}, [setData]);
+  const generateImage = () => {
+    const req = async () => {
+      const { data } = await axios.post('https://export.highcharts.com/', {
+        b64: true,
+        constr: 'Chart',
+        infile: JSON.stringify(options),
+        type: 'image/png',
+        width: '2000'
+      });
+      console.log(JSON.stringify(options))
+      const file = await fetch(data).then((res) => res.blob());
+      const data2 = {
+        title: 'Balanced Bites Chart',
+        text: 'Check out my Balanced Bites Chart!',
+        files: [new File([file], 'chart.png', { type: 'image/png' })],
+      };
+      try {
+        if (!navigator.canShare(data2)) {
+          console.error("Can't share");
+        }
+        await navigator.share(data2);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    req();
+  };
+
   return (
     <Grid container sx={{ height: '100%' }}>
       <Grid xs={6}>
@@ -121,14 +152,8 @@ const Results = () => {
             <div id='container'>
               <HighchartsReact highcharts={Highcharts} options={options} />
             </div>
-            <div className='share-box'>
-              <FacebookShareButton
-                url={'https://unihack-23.vercel.app/'}
-                quote={'I plege to eat healthy!'}
-                hashtag='#balancedbites'
-              >
-                <button className='purple-button'>share your results!</button>
-              </FacebookShareButton>
+            <div className='share-box' onClick={generateImage}>
+              <button className='purple-button'>share your results!</button>
             </div>
           </div>
         </Box>
