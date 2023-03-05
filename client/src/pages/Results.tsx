@@ -319,32 +319,50 @@ const Results = () => {
             width: '100%',
             height: '100%',
             backgroundColor: '#D9D9D9',
-            borderStyle: 'none none none double',
-            padding: '10px',
+            padding: '0.8vw',
+            border: '5px dashed #000000',
           }}
         >
           <div>
             <h2 className='summary-title'>✧Your Gut Summary✧</h2>
             <Tabs>
               <TabList>
-                <Tab>Breakfast</Tab>
-                <Tab>Lunch</Tab>
-                <Tab>Dinner</Tab>
-                <Tab>Details</Tab>
+                <Tab>Veggies</Tab>
+                <Tab>Fruit</Tab>
+                <Tab>Grains</Tab>
+                <Tab>Protein</Tab>
+                <Tab>Dairy</Tab>
               </TabList>
 
               <TabPanel>
-                <p>Here is a summary of what you had for breakfast</p>
-                <p>Not looking right? Edit here</p>
+                <p>Here is a summary of your veggie intake for today:</p>
+                <p>🌽 Breakfast: {formData.breakfast.vegetable} servings</p>
+                <p>🥕 Lunch: {formData.lunch.vegetable} servings</p>
+                <p>🍅 Dinner: {formData.dinner.vegetable} servings</p>
               </TabPanel>
               <TabPanel>
-                <p>Here is a summary of what you had for Lunch</p>
+                <p>Here is a summary of your fruit intake for today:</p>
+                <p>Breakfast: {formData.breakfast.fruit} servings</p>
+                <p>Lunch: {formData.lunch.fruit} servings</p>
+                <p>Dinner: {formData.dinner.fruit} servings</p>
               </TabPanel>
               <TabPanel>
-                <p>Here is a summary of what you had for Dinner</p>
+                <p>Here is a summary of your grain intake for today:</p>
+                <p>Breakfast: {formData.breakfast.grain} servings</p>
+                <p>Lunch: {formData.lunch.grain} servings</p>
+                <p>Dinner: {formData.dinner.grain} servings</p>
               </TabPanel>
               <TabPanel>
-                <p>Your details are as follow:</p>
+                <p>Here is a summary of your protein intake for today:</p>
+                <p>Breakfast: {formData.breakfast.meat} servings</p>
+                <p>Lunch: {formData.lunch.meat} servings</p>
+                <p>Dinner: {formData.dinner.meat} servings</p>
+              </TabPanel>
+              <TabPanel>
+                <p>Here is a summary of your dairy intake for today:</p>
+                <p>Breakfast: {formData.breakfast.dairy} servings</p>
+                <p>Lunch: {formData.lunch.dairy} servings</p>
+                <p>Dinner: {formData.dinner.dairy} servings</p>
               </TabPanel>
             </Tabs>
           </div>
