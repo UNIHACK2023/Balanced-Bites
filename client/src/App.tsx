@@ -9,7 +9,6 @@ import Dinner from './pages/Dinner';
 import AiFeedback from './components/AiFeedback';
 import Details from './pages/Details';
 import NewResults from './pages/ResultsPage';
-import AiFeedback from './components/AiFeedback';
 
 function App() {
   return (
