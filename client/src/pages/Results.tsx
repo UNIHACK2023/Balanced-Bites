@@ -54,6 +54,7 @@ const Results = () => {
       color: '#746BEB',
     },
     {
+      name: 'Fruit Percentages',
       data: [
         formData.breakfast.fruit / 1000,
         formData.breakfast.fruit / 1000,
@@ -95,6 +96,7 @@ const Results = () => {
       color: '#A17FBC',
     },
     {
+      name: 'Meat Percentages',
       data: [
         formData.breakfast.meat / 1000,
         formData.breakfast.meat / 1000,
@@ -136,6 +138,7 @@ const Results = () => {
       color: '#7FBC8C',
     },
     {
+      name: 'Dairy Percentages',
       data: [
         formData.breakfast.dairy / 1000,
         formData.breakfast.dairy / 1000,
@@ -207,6 +210,7 @@ const Results = () => {
       color: '#3BB3BD',
     },
     {
+      name: 'Vegetable Percentages',
       data: [
         formData.breakfast.vegetable / 100,
         formData.breakfast.vegetable / 1000,
@@ -218,6 +222,7 @@ const Results = () => {
       color: '#FFC700',
     },
     {
+      name: 'Grain Percentages',
       data: [
         formData.breakfast.fruit / 100,
         formData.breakfast.fruit / 1000,
