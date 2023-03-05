@@ -92,7 +92,7 @@ const Landing = () => {
         <p>NAME | ROLE | GITHUB/LINKEDIN</p>
         <h2>Tech Stack</h2>
         <p>SECTION | TECHNOLOGY</p>
-        <h2>Data sources</h2>
+        <h2>Data sourcess</h2>
         <p>SOURCE | LINK</p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
