@@ -160,7 +160,7 @@ const Results = () => {
     series: data,
     navigation: {
       buttonOptions: {
-        enabled: true,
+        enabled: false,
       },
     },
     credits: {
@@ -224,7 +224,7 @@ const Results = () => {
 
   return (
     <Grid container sx={{ height: '100%' }}>
-      <Grid xs={6}>
+      <Grid xs={12} md={6}>
         <Box>
           <div className='main-text'>
             <div id='container'>
@@ -236,10 +236,7 @@ const Results = () => {
           </div>
         </Box>
       </Grid>
-      <Grid xs={1}>
-        <img src={divider} className='divider' />
-      </Grid>
-      <Grid xs={4.8}>
+      <Grid xs={12} md={6}>
         <div
           style={{
             width: '100%',
