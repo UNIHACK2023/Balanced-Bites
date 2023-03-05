@@ -25,7 +25,11 @@ const AiFeedback = () => {
     req();
   }, []);
 
-  return <div>Feedback: {feedback}</div>;
+  return (
+    <div>
+      Feedback: {feedback} `${baseUrl}/ai-feedback`
+    </div>
+  );
 };
 
 export default AiFeedback;
