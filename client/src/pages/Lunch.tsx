@@ -21,7 +21,62 @@ const Lunch = () => {
       <InfoModal open={showModal} handleClose={handleClose}>
         <h1 style={{ textAlign: 'right' }}>LUNCH</h1>
         <hr />
-        <p>TODO</p>
+        <p>
+          Avoid the midday slump by eating a nutritious lunch to keep your metabolism active
+          and give you energy to power through the day.
+        </p>
+        <p>
+          When packing or buying your lunch, make sure it contains a mix of 
+          healthy carbs to feed your brain, protein to keep you full and plenty 
+          of fruits and veggies to hit your daily nutrition intake goals.
+        </p>
+        <p>
+          Don't know what to eat? Give these prepare ahead recipes a try!
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chickpea-and-couscous-salad">
+            Chickpea and couscous salad
+            </a>
+          </li>
+          <li>
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/vegie-lasagne">
+              Vegie lasagne
+            </a>
+          </li>
+          <li>
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/chicken-and-vegie-pie">
+              Chicken and vegie pie
+            </a>
+          </li>
+        </ul>
+        <p>
+          Information on food groups and serving sizes has been taken from 
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups"> eatforhealth.gov.au</a>. 
+          Serving sizes can be determined by checking product packaging.
+        </p>
+        <p>
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">
+            Vegetables and legumes
+          </a>
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">
+            Fruit
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">
+            Grains
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">
+            Lean meat, poultry alternatives
+          </a> 
+          &nbsp; | &nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">
+            Milk, yogurt and alternatives
+          </a> 
+        </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>
@@ -38,9 +93,9 @@ const Lunch = () => {
         <div className='main-text'>
           <img src={lunch} className='logo'/>
           <h1 className='page-message'>
-            The most important meal to eat everyday.
+            Avoid the midday slump.
             <br />
-            Make sure to eat breakfast everyday.
+            Make sure to eat lunch everyday.
           </h1>
           <FormPage
             title='Lunch'

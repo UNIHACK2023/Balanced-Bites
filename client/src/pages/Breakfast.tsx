@@ -54,14 +54,11 @@ const Breakfast = () => {
             </a>
           </li>
         </ul>
-
         <p>
           Information on food groups and serving sizes has been taken from 
           <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups"> eatforhealth.gov.au</a>. 
           Serving sizes can be determined by checking product packaging.
         </p>
-
-      
         <p>
           <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">
             Vegetables and legumes
@@ -83,8 +80,6 @@ const Breakfast = () => {
             Milk, yogurt and alternatives
           </a> 
         </p>
-
-
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>
