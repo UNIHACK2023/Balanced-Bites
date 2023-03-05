@@ -78,7 +78,7 @@ const Details = (props: customiseForm) => {
                 <u>skip</u>
               </button>
             </Link>
-            <Link to='/results'>
+            <Link to='/finalresults'>
               <button className='purple-button'>finish</button>
             </Link>
           </div>
