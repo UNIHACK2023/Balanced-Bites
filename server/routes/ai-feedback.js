@@ -34,7 +34,7 @@ aiFeedbackRouter.get('/', async (req, res) => {
   Object.keys(diffs).forEach((key) => {
     sortedDiffs.push([key, diffs[key]]);
   });
-  sortedDiffs.sort((a, b) => Math.abs(a[1]) - Math.abs(b[1]));
+  sortedDiffs.sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
 
   // converting diffs to chat text. difference of 0 is ignored.
   for (const diff of sortedDiffs) {
@@ -49,6 +49,8 @@ aiFeedbackRouter.get('/', async (req, res) => {
     res.json('Your diet completely matches the recommendations!');
     return;
   }
+
+  console.log(`The user has a ${recs[0]} and a ${recs[1]}.`);
 
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
