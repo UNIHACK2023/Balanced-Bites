@@ -14,10 +14,10 @@ Eating from all the main food groups is something we learn when we’re very you
 We saw a gap in the education and awareness in eating well and hence built Balanced Bites to target this gap in the market. We framed our decisions around the United Nation's sustainabilioty goals Education and Health
 ![UN Sustainable Development Goals](https://www.accessnow.org/cms/assets/uploads/2017/06/UNSustainableDevelopmentGoals_Brand-01-e1581356074445.jpg)
 
-| Clean Energy | Quality Education | Responsible Consumption |
-| --------------- | ----------------- |------------------------------|
+| Clean Energy                                                                                                                                                                                                                   | Quality Education                                                                                                                                                                                                                                                    | Responsible Consumption                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [![3. Good Helath and Well-Being](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-03.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/energy/) | [![4. Responsible Consumption & Production](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-04.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/sustainable-consumption-production/) | [![12. Responsible Consumption](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-12.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/climate-change/) |
-| - TODO<br/>- TODO  | - TODO<br/>-TODO | - TODO<br/>- TODO |
+| - TODO<br/>- TODO                                                                                                                                                                                                              | - TODO<br/>-TODO                                                                                                                                                                                                                                                     | - TODO<br/>- TODO                                                                                                                                                                                                                    |
 
 ## What it does
 
@@ -64,6 +64,8 @@ We're immensely proud of our Balanced Bites app that aims to make a tangible pos
 ## What we learned
 
 We learnt that is is very important to communicate regularly with all the members what we will be doing to optimise our different skills
+
+We discovered the importance and usefulness of tools like Vercel that not only host and continuously deploy your code as you make changes to your GitHub project, they also warn you if your branch would cause your deployment to break. This was an important safety measure that we really appreciated!
 
 ## What's next for Balanced Bites
 
