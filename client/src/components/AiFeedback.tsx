@@ -17,11 +17,12 @@ const AiFeedback = () => {
   const baseUrl = 'http://localhost:3000';
 
   const foods = {
-    vegetable: formData.breakfast.vegetable + formData.lunch.vegetable + formData.dinner.vegetable,
-    fruit: formData.breakfast.fruit + formData.lunch.fruit + formData.dinner.fruit,
-    grain: formData.breakfast.grain + formData.lunch.grain + formData.dinner.grain,
-    meat: formData.breakfast.meat + formData.lunch.meat + formData.dinner.meat,
-    dairy: formData.breakfast.dairy + formData.lunch.dairy + formData.dinner.dairy,
+    vegetable:
+      formData.breakfast.vegetable + formData.lunch.vegetable + formData.dinner.vegetable || 0,
+    fruit: formData.breakfast.fruit + formData.lunch.fruit + formData.dinner.fruit || 0,
+    grain: formData.breakfast.grain + formData.lunch.grain + formData.dinner.grain || 0,
+    meat: formData.breakfast.meat + formData.lunch.meat + formData.dinner.meat || 0,
+    dairy: formData.breakfast.dairy + formData.lunch.dairy + formData.dinner.dairy || 0,
   };
 
   useEffect(() => {
