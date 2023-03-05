@@ -34,14 +34,14 @@ aiFeedbackRouter.get('/', async (req, res) => {
   Object.keys(diffs).forEach((key) => {
     sortedDiffs.push([key, diffs[key]]);
   });
-  sortedDiffs.sort((a, b) => Math.abs(a[1]) - Math.abs(b[1]));
+  sortedDiffs.sort((a, b) => Math.abs(b[1]) - Math.abs(a[1]));
 
   // converting diffs to chat text. difference of 0 is ignored.
   for (const diff of sortedDiffs) {
     if (diff[1] < 0) {
-      recs.push(diff[0] + ' deficit of ' + (Math.abs(diff[1]) + ` servings`));
+      recs.push(' ' + diff[0] + ' deficit of ' + (Math.abs(diff[1]) + ` servings`));
     } else if (diff[1] > 0) {
-      recs.push(diff[0] + ' surplus of ' + (Math.abs(diff[1]) + ` servings`));
+      recs.push(' ' + diff[0] + ' surplus of ' + (Math.abs(diff[1]) + ` servings`));
     }
   }
 
@@ -49,6 +49,8 @@ aiFeedbackRouter.get('/', async (req, res) => {
     res.json('Your diet completely matches the recommendations!');
     return;
   }
+
+  // console.log(`The user has a${recs}.`);
 
   const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -59,7 +61,7 @@ aiFeedbackRouter.get('/', async (req, res) => {
     messages: [
       {
         role: 'system',
-        content: `You are an AI assistant with a friendly attitude who gives tips on achieving a balanced diet based on the user's surpluses and deficits. Greet the user and explain your purpose. Give 2 single sentence tips to help the user achieve a balanced diet. The user has a ${recs[0]} and a ${recs[1]}. Surpluses should be reduced and deficits should be increased.`,
+        content: `You are an AI assistant with a friendly attitude who gives tips on achieving a balanced diet based on the user's surpluses and deficits. Greet the user and explain your purpose. Give 2 single sentence tips to help the user achieve a balanced diet. The user has a${recs}. Surpluses should be reduced and deficits should be increased. Do not expose the literal surplace/deficit numbers.`,
       },
     ],
   });

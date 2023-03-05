@@ -14,6 +14,11 @@ Eating from all the main food groups is something we learn when we’re very you
 We saw a gap in the education and awareness in eating well and hence built Balanced Bites to target this gap in the market. We framed our decisions around the United Nation's sustainabilioty goals Education and Health
 ![UN Sustainable Development Goals](https://www.accessnow.org/cms/assets/uploads/2017/06/UNSustainableDevelopmentGoals_Brand-01-e1581356074445.jpg)
 
+| Clean Energy | Quality Education | Responsible Consumption |
+| --------------- | ----------------- |------------------------------|
+| [![3. Good Helath and Well-Being](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-03.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/energy/) | [![4. Responsible Consumption & Production](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-04.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/sustainable-consumption-production/) | [![12. Responsible Consumption](https://i0.wp.com/www.un.org/sustainabledevelopment/wp-content/uploads/2018/05/E_SDG-goals_icons-individual-rgb-12.png?resize=240%2C240)](https://www.un.org/sustainabledevelopment/climate-change/) |
+| - TODO<br/>- TODO  | - TODO<br/>-TODO | - TODO<br/>- TODO |
+
 ## What it does
 
 ![Landing](https://github.com/UNIHACK2023/UNIHACK-23/blob/main/landing.gif)
@@ -27,6 +32,8 @@ Balanced Bites is a gut biome visualiser that gives users a snapshot of everythi
 ### 1. Brainstorming 🧠
 
 We wanted our app to make a positive impact on the lives of people in our community so we framed our brainstorming with Human Centred Design practices. We brainstormed issues which affect people and were able to funnel down to solving the problem of not knowing whether what you are eating is healthy. We futher considered the journeys of multiple users to further empathise and come up with requirements. The app we want to build should be fun, informative and have a call to action.
+
+// IMAGE WHITEBOARDS?
 
 ### 2. Research 🧪
 
