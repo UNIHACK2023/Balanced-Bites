@@ -266,3 +266,8 @@ select {
 .share-box {
   padding-top: 20px;
 }
+
+.divider {
+  width: 50px;
+  overflow: hidden;
+}
