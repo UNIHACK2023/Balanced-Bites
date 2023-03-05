@@ -20,219 +20,53 @@ const Results = () => {
     localStorage.getItem(formDates[formDates.length - 1]) ||
       '{"breakfast": {}, "lunch": {}, "dinner": {}}'
   );
-  console.log(formData);
+
+  formData.breakfast.fruit = formData.breakfast.fruit || 0;
+  formData.lunch.fruit = formData.lunch.fruit || 0;
+  formData.dinner.fruit = formData.dinner.fruit || 0;
+
+  formData.breakfast.vegetable = formData.breakfast.vegetable || 0;
+  formData.lunch.vegetable = formData.lunch.vegetable || 0;
+  formData.dinner.vegetable = formData.dinner.vegetable || 0;
+
+  formData.breakfast.grain = formData.breakfast.grain || 0;
+  formData.lunch.grain = formData.lunch.grain || 0;
+  formData.dinner.grain = formData.dinner.grain || 0;
+
+  formData.breakfast.meat = formData.breakfast.meat || 0;
+  formData.lunch.meat = formData.lunch.meat || 0;
+  formData.dinner.meat = formData.dinner.meat || 0;
+
+  formData.breakfast.dairy = formData.breakfast.dairy || 0;
+  formData.lunch.dairy = formData.lunch.dairy || 0;
+  formData.dinner.dairy = formData.dinner.dairy || 0;
 
   const [data, setData] = React.useState<any>([
     {
-      name: 'Fruit',
-      data: [
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.fruit,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.fruit,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.fruit,
-        },
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.fruit,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.fruit,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.fruit,
-        },
-      ],
-      color: '#746BEB',
+      name: 'Fruits',
+      data: [...Array(formData.breakfast.fruit)].map((item: any) => {return {name: 'Breakfast', value: 1}}).concat([...Array(formData.lunch.fruit)].map((item: any) => {return {name: 'Lunch', value: 1}})).concat([...Array(formData.dinner.fruit)].map((item: any) => {return {name: 'Dinner', value: 1}})),
+      color: '#BC7F7F',
     },
     {
-      name: 'Fruit Percentages',
-      data: [
-        formData.breakfast.fruit / 1000,
-        formData.breakfast.fruit / 1000,
-        formData.breakfast.fruit / 2000,
-        formData.breakfast.fruit / 4000,
-        formData.lunch.fruit / 5000,
-        formData.lunch.fruit / 1000,
-      ],
-      color: '#746BEB',
+      name: 'Vegetables',
+      data: [...Array(formData.breakfast.vegetable)].map((item: any) => {return {name: 'Breakfast', value: 1}}).concat([...Array(formData.lunch.vegetable)].map((item: any) => {return {name: 'Lunch', value: 1}})).concat([...Array(formData.dinner.vegetable)].map((item: any) => {return {name: 'Dinner', value: 1}})),
+      color: '#FFC700',
     },
     {
-      name: 'Meat',
-      data: [
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.meat,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.meat,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.meat,
-        },
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.meat,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.meat,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.meat,
-        },
-      ],
-      color: '#A17FBC',
+      name: 'Grains',
+      data: [...Array(formData.breakfast.grain)].map((item: any) => {return {name: 'Breakfast', value: 1}}).concat([...Array(formData.lunch.grain)].map((item: any) => {return {name: 'Lunch', value: 1}})).concat([...Array(formData.dinner.grain)].map((item: any) => {return {name: 'Dinner', value: 1}})),
+      color: '#3BB3BD',
     },
     {
-      name: 'Meat Percentages',
-      data: [
-        formData.breakfast.meat / 1000,
-        formData.breakfast.meat / 1000,
-        formData.breakfast.meat / 2000,
-        formData.breakfast.meat / 4000,
-        formData.lunch.meat / 5000,
-        formData.lunch.meat / 1000,
-      ],
+      name: 'Protein',
+      data: [...Array(formData.breakfast.meat)].map((item: any) => {return {name: 'Breakfast', value: 1}}).concat([...Array(formData.lunch.meat)].map((item: any) => {return {name: 'Lunch', value: 1}})).concat([...Array(formData.dinner.meat)].map((item: any) => {return {name: 'Dinner', value: 1}})),
       color: '#A17FBC',
     },
     {
       name: 'Dairy',
-      data: [
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.dairy,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.dairy,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.dairy,
-        },
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.dairy,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.dairy,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.dairy,
-        },
-      ],
+      data: [...Array(formData.breakfast.dairy)].map((item: any) => {return {name: 'Breakfast', value: 1}}).concat([...Array(formData.lunch.dairy)].map((item: any) => {return {name: 'Lunch', value: 1}})).concat([...Array(formData.dinner.dairy)].map((item: any) => {return {name: 'Dinner', value: 1}})),
       color: '#7FBC8C',
-    },
-    {
-      name: 'Dairy Percentages',
-      data: [
-        formData.breakfast.dairy / 1000,
-        formData.breakfast.dairy / 1000,
-        formData.breakfast.dairy / 2000,
-        formData.breakfast.dairy / 4000,
-        formData.lunch.dairy / 5000,
-        formData.lunch.dairy / 10,
-      ],
-      color: '#7FBC8C',
-    },
-    {
-      name: 'Vegetable',
-      data: [
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.vegetable,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.vegetable,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.vegetable,
-        },
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.vegetable,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.vegetable,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.vegetable,
-        },
-      ],
-      color: '#FFC700',
-    },
-    {
-      name: 'Grain',
-      data: [
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.grain,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.grain,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.grain,
-        },
-        {
-          name: 'Breakfast',
-          value: formData.breakfast.grain,
-        },
-        {
-          name: 'Lunch',
-          value: formData.lunch.grain,
-        },
-        {
-          name: 'Dinner',
-          value: formData.dinner.grain,
-        },
-      ],
-      color: '#3BB3BD',
-    },
-    {
-      name: 'Vegetable Percentages',
-      data: [
-        formData.breakfast.vegetable / 100,
-        formData.breakfast.vegetable / 1000,
-        formData.breakfast.vegetable / 2000,
-        formData.breakfast.vegetable / 4000,
-        formData.lunch.vegetable / 5000,
-        formData.lunch.vegetable / 10,
-      ],
-      color: '#FFC700',
-    },
-    {
-      name: 'Grain Percentages',
-      data: [
-        formData.breakfast.fruit / 100,
-        formData.breakfast.fruit / 1000,
-        formData.breakfast.fruit / 2000,
-        formData.breakfast.fruit / 4000,
-        formData.lunch.fruit / 5000,
-        formData.lunch.fruit / 10,
-      ],
-      color: '#3BB3BD',
-    },
+    }
   ]);
 
   const options = {
