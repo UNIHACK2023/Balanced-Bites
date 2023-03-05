@@ -191,13 +191,16 @@ const Results = () => {
         type: 'image/png',
         width: '2000'
       });
-      console.log(JSON.stringify(options))
-      const file = await fetch(data).then((res) => res.blob());
+      const base64url = 'data:image/png;base64,' + data;
+      const blob = await (await fetch(base64url)).blob();
+      const file = new File([blob], 'chart.png', { type: 'image/png' });
+
       const data2 = {
-        title: 'Balanced Bites Chart',
-        text: 'Check out my Balanced Bites Chart!',
-        files: [new File([file], 'chart.png', { type: 'image/png' })],
+        files: [file],
+        title: 'My Foodprint',
+        text: 'Check out my foodprint!',
       };
+      
       try {
         if (!navigator.canShare(data2)) {
           console.error("Can't share");
