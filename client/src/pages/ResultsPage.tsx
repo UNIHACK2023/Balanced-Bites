@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import info from '../assets/whiteinfo.png';
 import Credits from '../components/Credits';
 import InfoModal from '../components/InfoModal';
-import about from '../assets/details.png';
+import summary from '../assets/summary.png';
 import Results from './Results';
 
 const NewResults = () => {
@@ -31,6 +31,7 @@ const NewResults = () => {
           <img src={info} onClick={handleOpen} className='info' />
         </div>
         <div className='main-text'>
+          <img src={summary} className='logo' />
           <Results />
           <Credits></Credits>
         </div>
