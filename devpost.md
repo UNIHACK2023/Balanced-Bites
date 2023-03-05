@@ -22,15 +22,21 @@ BalancedBites is a gut biome visualiser that gives users a snapshot of everythin
 
 The app i
 
-### Brainstorming
+### 1. Brainstorming 🧠
 
-### Wireframing & Prototyping
+We wanted our app to make a positive impact on the lives of people in our community so we framed our brainstorming with Human Centred Design practices.
+
+### 2. Research 🧪
+
+We wanted our app Balanced Bites to be credible and scientifically backed and we tasked our to find suggested food intakes for each. To inform our design we further researched
+
+### 3. Wireframing & Prototyping ✏️
+
+To effectively communicate to all our engineers the plan of what was to be built
 
 We initially mapped out our userflow on a white board. The design of our app is fun and funky and inspired by a neobrutalist aesthetic.
 
-### Research
-
-### Development
+### 4. Development 💻
 
 ## Challenges we ran into
 
