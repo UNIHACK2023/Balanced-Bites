@@ -7,7 +7,7 @@ Eating from all the main food groups is something we learn when we’re very you
  <ol>
   <li>In 2017-18, just over half (51.3%) of Australians aged 18 years and over met the guidelines for the - recommended daily serves of fruit (2 or more serves).</li>
   <li>One in thirteen (7.5%) adults met the guidelines for serves of vegetables (5-6 or more serves for men depending on age, and 5 or more for women).</li>
-  <li>The Australian Institute of Health and Welfare reported last year that 6.1% of adults ate the recommended amount of both fruit and vegetables</li>
+  <li>The Australian Institute of Health and Welfare reported last year that 6.1% of adults ate the recommended amount of both fruit and vegetables.</li>
   <li>Furthermore, less than half of all Australian adults get their recommended daily intake of calcium.</li>
 </ol>
 
