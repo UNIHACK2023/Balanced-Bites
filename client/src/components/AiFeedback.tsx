@@ -14,7 +14,7 @@ const AiFeedback = () => {
 
   const [feedback, setFeedback] = useState('');
 
-  const baseUrl = 'http://localhost:3000';
+  const baseUrl = 'https://unihack-23-production.up.railway.app';
 
   const foods = {
     vegetable:
@@ -43,8 +43,7 @@ const AiFeedback = () => {
   return (
     <div>
       <div style={{ textAlign: 'center' }}>🤖🤖🤖</div>
-      <p>{feedback}</p>
-      <div style={{ textAlign: 'center' }}>🥰🥰🥰</div>
+      <p>{feedback == '' ? 'AI loading...' : feedback}</p>
     </div>
   );
 };
