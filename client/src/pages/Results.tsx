@@ -297,14 +297,13 @@ const Results = () => {
             <div id='container'>
               <HighchartsReact highcharts={Highcharts} options={options} />
             </div>
-            <button className='purple-button'> Share your results</button>
-            <div>
+            <div className='share-box'>
               <FacebookShareButton
-                url={'https://www.example.com'}
-                quote={'Dummy text!'}
-                hashtag='#muo'
+                url={'https://unihack-23.vercel.app/'}
+                quote={'I plege to eat healthy!'}
+                hashtag='#balancedbites'
               >
-                <FacebookIcon size={32} round />
+                <button className='purple-button'>share your results!</button>
               </FacebookShareButton>
             </div>
           </div>
@@ -327,7 +326,6 @@ const Results = () => {
                 <Tab>Breakfast</Tab>
                 <Tab>Lunch</Tab>
                 <Tab>Dinner</Tab>
-                <Tab>Snacks</Tab>
                 <Tab>Details</Tab>
               </TabList>
 
@@ -340,9 +338,6 @@ const Results = () => {
               </TabPanel>
               <TabPanel>
                 <p>Here is a summary of what you had for Dinner</p>
-              </TabPanel>
-              <TabPanel>
-                <p>Currently our app does not support snacks</p>
               </TabPanel>
               <TabPanel>
                 <p>Your details are as follow:</p>
