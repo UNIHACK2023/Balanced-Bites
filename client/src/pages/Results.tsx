@@ -116,7 +116,7 @@ const Results = () => {
   const options = {
     chart: {
       type: 'packedbubble',
-      height: '70%',
+      height: '80%',
       backgroundColor: 'transparent'
     },
     title: {
