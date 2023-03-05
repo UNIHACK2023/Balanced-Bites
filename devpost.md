@@ -16,11 +16,13 @@ We saw a gap in the education and awareness in eating well and hence built Balan
 
 ## What it does
 
+![Landing](https://github.com/UNIHACK2023/UNIHACK-23/blob/main/landing.gif)
+
 BalancedBites is a gut biome visualiser that gives users a snapshot of everything that they've eaten in a day. Our website interface is easy to use, and it takes less than a minute to record your information and generate a bubble map of your food intake. The goal is to eat a diverse variety of foods across the different food groups
 
 ## How we built it
 
-The app i
+<img src="https://media.tenor.com/PwEIXSJWhsQAAAAd/build-lego.gif"  width="400">
 
 ### 1. Brainstorming 🧠
 
@@ -38,6 +40,8 @@ We initially mapped out our userflow on a white board. The design of our app is 
 
 ### 4. Development 💻
 
+The app is built in Typescript with Vite, React and OpenAI APIs.
+
 ## Challenges we ran into
 
 Sharing the chart via social media
@@ -46,13 +50,18 @@ Participating remote in Sydney
 
 ## Accomplishments that we're proud of
 
+<img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/f55a3054259101.5953e4f53ef53.gif"  width="400">
+
 We're immensely proud of Balanced Bites that aims to make a tangible positive impact by raising awareness on healthy eating.
 We are super proud of how far we've come in only 48 hours! We were able to get the app completely functional and deployed!
 
 ## What we learned
 
-We learnt that is is very impor
+We learnt that is is very important to communicate regularly with all the members what we will be doing to optimise our different skills
 
 ## What's next for Balanced Bites
+
+<img src="https://cdn.dribbble.com/users/160641/screenshots/14477570/media/89b37143200c0a153e6b16441b021be1.gif
+"  width="400">
 
 We aim to incentivise continued use of balanced bite through implenting a calendar feature where user can see a visualisation of their food intake on a calendar. We recognise eating is a very social activity and
