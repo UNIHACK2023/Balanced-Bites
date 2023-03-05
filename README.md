@@ -1,4 +1,4 @@
-# UNIHACK-23
+# Balanced Bites
 
 ## Development
 

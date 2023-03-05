@@ -25,9 +25,9 @@ const Breakfast = () => {
           Kick start your day and boost your metabolism with a healthy breakfast. 
           Not only do you start off your day well, consistently eating breakfast 
           has been linked to lower rates of obesity and chronic disease. 
-          [<a href="https://www.ahajournals.org/doi/pdf/10.1161/cir.0000000000000476">1</a>]
-          [<a href="https://www.acc.org/latest-in-cardiology/articles/2017/09/28/11/54/skipping-breakfast-associated-with-atherosclerosis">2</a>]
-          [<a href="https://pubmed.ncbi.nlm.nih.gov/31918985/">3</a>]
+          [<a href="https://www.ahajournals.org/doi/pdf/10.1161/cir.0000000000000476" target='_blank'>1</a>]
+          [<a href="https://www.acc.org/latest-in-cardiology/articles/2017/09/28/11/54/skipping-breakfast-associated-with-atherosclerosis" target='_blank'>2</a>]
+          [<a href="https://pubmed.ncbi.nlm.nih.gov/31918985/" target='_blank'>3</a>]
         </p>
         <p>
           When making your breakfast, make sure it contains a mixture of healthy 
@@ -39,44 +39,44 @@ const Breakfast = () => {
 
         <ul>
           <li>
-            <a href="https://www.bbcgoodfood.com/recipes/overnight-oats">
+            <a href="https://www.bbcgoodfood.com/recipes/overnight-oats" target='_blank'>
             Overnight oats with your choice of topping
             </a>
           </li>
           <li>
-            <a href="https://www.verywellfit.com/avocado-and-egg-toast-4144603">
+            <a href="https://www.verywellfit.com/avocado-and-egg-toast-4144603" target='_blank'>
               Avocado and egg toast
             </a>
           </li>
           <li>
-            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/carrot-and-parsnip-muffins">
+            <a href="https://www.eatforhealth.gov.au/eating-well/healthy-recipes/carrot-and-parsnip-muffins" target='_blank'>
               Carrot and parsnip muffins
             </a>
           </li>
         </ul>
         <p>
-          Information on food groups and serving sizes has been taken from 
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups"> eatforhealth.gov.au</a>. 
+          Information on food groups and serving sizes has been taken from&nbsp;
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups" target='_blank'>eatforhealth.gov.au</a>. 
           Serving sizes can be determined by checking product packaging.
         </p>
         <p>
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans" target='_blank'>
             Vegetables and legumes
           </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit" target='_blank'>
             Fruit
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre" target='_blank'>
             Grains
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and" target='_blank'>
             Lean meat, poultry alternatives
           </a> 
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">
+          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat" target='_blank'>
             Milk, yogurt and alternatives
           </a> 
         </p>
