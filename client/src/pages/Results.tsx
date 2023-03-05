@@ -8,6 +8,8 @@ import HighchartsMore from 'highcharts/highcharts-more';
 import HighchartsExporting from 'highcharts/modules/exporting';
 HighchartsMore(Highcharts);
 HighchartsExporting(Highcharts);
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const Results = () => {
   const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
@@ -229,7 +231,7 @@ const Results = () => {
     chart: {
       type: 'packedbubble',
       height: '80%',
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
     },
     title: {
       text: '',
@@ -318,13 +320,22 @@ const Results = () => {
         >
           <div>
             <h2 className='summary-title'>✧Your Gut Summary✧</h2>
-            <p>
-              dhfjsdfj sdfjsd jfsdhjf sdhfgsd hjfgsd hjf gsdhjfg hsdgfhj sdgfsdf
-              sdfdhfjsdfj sdfjsd jfsdhjf sdhfgsd hjfgsd hjf gsdhjfg hsdgfhj
-              sdgfsdf sdf dhfjsdfj sdfjsd jfsdhjf sdhfgsd hjfgsd hjf gsdhjfg
-              hsdgfhj sdgfsdf sdf dhfjsdfj sdfjsd jfsdhjf sdhfgsd hjfgsd hjf
-              gsdhjfg hsdgfhj sdgfsdf sdf
-            </p>
+            <Tabs>
+              <TabList>
+                <Tab>Breakfast</Tab>
+                <Tab>Lunch</Tab>
+                <Tab>Dinner</Tab>
+                <Tab>Snacks</Tab>
+                <Tab>Details</Tab>
+              </TabList>
+
+              <TabPanel>
+                <p>Any content 1</p>
+              </TabPanel>
+              <TabPanel>
+                <h2>Any content 2</h2>
+              </TabPanel>
+            </Tabs>
           </div>
           <div>
             <h2 className='summary-title'>✳Tips & Tricks✳</h2>
