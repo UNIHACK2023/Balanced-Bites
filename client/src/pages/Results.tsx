@@ -224,7 +224,7 @@ const Results = () => {
 
   return (
     <Grid container sx={{ height: '100%' }}>
-      <Grid xs={12} md={6}>
+      <Grid xs={12} lg={6}>
         <Box>
           <div className='main-text'>
             <div id='container'>
@@ -236,7 +236,7 @@ const Results = () => {
           </div>
         </Box>
       </Grid>
-      <Grid xs={12} md={6}>
+      <Grid xs={12} lg={6}>
         <div
           style={{
             width: '100%',
