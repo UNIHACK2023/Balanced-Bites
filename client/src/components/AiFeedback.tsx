@@ -9,7 +9,7 @@ const AiFeedback = () => {
 
   const [feedback, setFeedback] = useState('');
 
-  const baseUrl = 'http://unihack-23-production.up.railway.app';
+  const baseUrl = 'https://unihack-23-production.up.railway.app';
 
   useEffect(() => {
     const req = async () => {
