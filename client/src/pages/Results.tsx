@@ -78,10 +78,10 @@ const Results = () => {
       text: '',
       align: 'left',
     },
-    // tooltip: {
-    //   useHTML: true,
-    //   pointFormat: 'There are {point.value} come from <b>{point.name}</b>',
-    // },
+    tooltip: {
+      useHTML: true,
+      pointFormat: 'This came from <b>{point.name}</b>',
+    },
     plotOptions: {
       packedbubble: {
         minSize: '50%',
