@@ -96,7 +96,31 @@ const Landing = () => {
       <InfoModal open={showModal} handleClose={handleClose}>
         <h1 style={{ textAlign: 'right' }}>BALANCED BITES</h1>
         <hr />
-        <p>TODO</p>
+        <p>
+          When you’re browsing supermarket aisles, or at a restaurant, 
+          or microwaving whatever’s left in your fridge, how often are you 
+          thinking about maintaining a balanced diet? 
+        </p>
+        <p>
+          Balanced Bites make it easy to visualise what you eat with an intuitive, 
+          easy to use website. Our gamified experience takes less than one minute 
+          to generate a customised visual representing our user's daily diet.
+        </p>
+        <p>
+          We provide our users with customised AI powered tips, targeting areas 
+          of nutritional deficiency based on their daily dietary intakes.
+        </p>
+        <p>
+          Track your diet and see how you compare with friends. Try out Balanced Bites.
+        </p>
+        <p>
+          To use Balanced Bites, simply click the 'get started' button and use 
+          the sliders to indicate how many servings of each food group you ate in that meal.
+        </p>
+        <p>
+          Balanced Bites was made in 48 hours by a team of 6 computer science 
+          students from the University of New South Wales for UNIHACK 2023 (March 3-5).
+        </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
         <div className='row-container left'>

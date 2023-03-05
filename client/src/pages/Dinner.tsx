@@ -21,59 +21,87 @@ const Dinner = () => {
       <InfoModal open={showModal} handleClose={handleClose}>
         <h1 style={{ textAlign: 'right' }}>DINNER</h1>
         <hr />
+        <p>Round out your day with a hearty and nutritious dinner.</p>
         <p>
-          Round out your day with a hearty and nutritious dinner.
+          Make sure your dinner includes a good mix of vegetables, proteins and
+          carbs to refuel your energy after your busy day.
         </p>
         <p>
-          Make sure your dinner includes a good mix of vegetables, proteins and carbs
-          to refuel your energy after your busy day.
-        </p>
-        <p>
-          Sick of length dinner prep? Give these quick, delicious dinner recipes a try!
+          Sick of length dinner prep? Give these quick, delicious dinner recipes
+          a try!
         </p>
 
         <ul>
           <li>
-            <a href="https://www.woolworths.com.au/shop/recipes/quick-roast-pork-with-potato-and-slaw-salad" target='_blank'>
-            Quick roast pork with potato and slaw salad
+            <a
+              href='https://www.woolworths.com.au/shop/recipes/quick-roast-pork-with-potato-and-slaw-salad'
+              target='_blank'
+            >
+              Quick roast pork with potato and slaw salad
             </a>
           </li>
           <li>
-            <a href="https://www.woolworths.com.au/shop/recipes/quick-beef-korma-with-naan-and-salad" target='_blank'>
+            <a
+              href='https://www.woolworths.com.au/shop/recipes/quick-beef-korma-with-naan-and-salad'
+              target='_blank'
+            >
               Beef korma with naan and salad
             </a>
           </li>
           <li>
-            <a href="https://www.woolworths.com.au/shop/recipes/easy-spaghetti-marinara" target='_blank'>
+            <a
+              href='https://www.woolworths.com.au/shop/recipes/easy-spaghetti-marinara'
+              target='_blank'
+            >
               Easy spaghetti marinara
             </a>
           </li>
         </ul>
         <p>
           Information on food groups and serving sizes has been taken from&nbsp;
-           <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups" target='_blank'>eatforhealth.gov.au</a>. 
-          Serving sizes can be determined by checking product packaging.
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups'
+            target='_blank'
+          >
+            eatforhealth.gov.au
+          </a>
+          . Serving sizes can be determined by checking product packaging.
         </p>
         <p>
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans'
+            target='_blank'
+          >
             Vegetables and legumes
           </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit'
+            target='_blank'
+          >
             Fruit
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre'
+            target='_blank'
+          >
             Grains
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and'
+            target='_blank'
+          >
             Lean meat, poultry alternatives
-          </a> 
+          </a>
           &nbsp; | &nbsp;
-          <a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat" target='_blank'>
+          <a
+            href='https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat'
+            target='_blank'
+          >
             Milk, yogurt and alternatives
-          </a> 
+          </a>
         </p>
       </InfoModal>
       <div style={{ display: 'flex' }}>
@@ -107,7 +135,7 @@ const Dinner = () => {
             protein_colour='#A17FBC'
             grain_colour='#3BB3BD'
             dairy_colour='#7FBC8C'
-            fruit_colour='#BC7F7F'
+            fruit_colour='#746BEB'
           />
           <div className='button-group'>
             <Link to='/results'>
