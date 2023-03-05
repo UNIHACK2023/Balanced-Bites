@@ -39,6 +39,9 @@ We initially mapped out our userflow on a white board. The design of our app is 
 ### 4. Development 💻
 
 ## Challenges we ran into
+In utilising the OpenAI API, we realised that we couldn't implement all the logic on the frontend because our API key would be exposed, even if we don't directly expose our .env data. This was a mandatory security precaution that we had to follow. As such, a backend had to be created and deployed as well. Fortunately, deployment trivial through the use of Railway. The greater issue was just dealing with the extra complexity and bugs/blockers that came with having to manage a backend as well.
+
+Another challenge we noticed with this Hackathon was the act of balancing error mitigation agains the limited time we had. For example, taking the time to set up error loggers and setting up proper dev vs prod environments. For the most part, we tried to invest the least time for the best safety and programming experience we could achieve.
 
 Sharing the chart via social media
 Customised AI outputs
