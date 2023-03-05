@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { FacebookShareButton, FacebookIcon } from 'react-share';
+import { PinterestShareButton, PinterestIcon } from 'react-share';
 import Grid from '@mui/material/Unstable_Grid2';
 import Box from '@mui/material/Box';
 import Highcharts from 'highcharts';
@@ -11,6 +12,7 @@ HighchartsExporting(Highcharts);
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import AiFeedback from '../components/AiFeedback';
+import Tips from '../components/Tips';
 
 const Results = () => {
   const formDates = JSON.parse(localStorage.getItem('formDates') || '[]');
@@ -296,7 +298,7 @@ const Results = () => {
             <div id='container'>
               <HighchartsReact highcharts={Highcharts} options={options} />
             </div>
-            <div> Share your results</div>
+            <button className='purple-button'> Share your results</button>
             <div>
               <FacebookShareButton
                 url={'https://www.example.com'}
@@ -331,10 +333,20 @@ const Results = () => {
               </TabList>
 
               <TabPanel>
-                <p>Any content 1</p>
+                <p>Here is a summary of what you had for breakfast</p>
+                <p>Not looking right? Edit here</p>
               </TabPanel>
               <TabPanel>
-                <h2>Any content 2</h2>
+                <p>Here is a summary of what you had for Lunch</p>
+              </TabPanel>
+              <TabPanel>
+                <p>Here is a summary of what you had for Dinner</p>
+              </TabPanel>
+              <TabPanel>
+                <p>Currently our app does not support snacks</p>
+              </TabPanel>
+              <TabPanel>
+                <p>Your details are as follow:</p>
               </TabPanel>
             </Tabs>
           </div>
@@ -346,6 +358,7 @@ const Results = () => {
               can have a piece of mind that you are eating the right amount of nutrients.
             </p>
             <AiFeedback />
+            <Tips />
           </div>
         </div>
       </Grid>

@@ -11,7 +11,10 @@ const Details = () => {
   const handleClose = () => setShowModal(false);
 
   const [detailsData, setDetailsData] = React.useState(
-    JSON.parse(localStorage.getItem('personalDetails') || '{"age": -1, "gender": "U", "height": -1, "weight": -1}')
+    JSON.parse(
+      localStorage.getItem('personalDetails') ||
+        '{"age": -1, "gender": "U", "height": -1, "weight": -1}'
+    )
   );
 
   const handleInput = (e: React.FormEvent<HTMLInputElement>) => {
@@ -21,7 +24,7 @@ const Details = () => {
 
   const handleGender = (e: React.FormEvent<HTMLSelectElement>) => {
     const { name, value } = e.currentTarget;
-    console.log("test");
+    console.log('test');
     setDetailsData({ ...detailsData, [name]: value });
   };
 
@@ -56,14 +59,36 @@ const Details = () => {
             <br />
             You may skip this if you wish.
           </h1>
-          <input type='number' name='age' placeholder='Age' onInput={handleInput} value={detailsData.age != -1 ? detailsData.age : ''} />
+          <input
+            type='number'
+            name='age'
+            placeholder='Age'
+            onInput={handleInput}
+            value={detailsData.age != -1 ? detailsData.age : ''}
+          />
           <select name='gender' onChange={handleGender}>
             <option value='U'>Prefer not to say</option>
-            <option value='F' selected={detailsData.gender == 'F'}>Female</option>
-            <option value='M' selected={detailsData.gender == 'M'}>Male</option>
+            <option value='F' selected={detailsData.gender == 'F'}>
+              Female
+            </option>
+            <option value='M' selected={detailsData.gender == 'M'}>
+              Male
+            </option>
           </select>
-          <input type='number' name='height' placeholder='Height in cm' onInput={handleInput} value={detailsData.height != -1 ? detailsData.height : ''}/>
-          <input type='number' name='weight' placeholder='Body mass in kg' onInput={handleInput} value={detailsData.weight != -1 ? detailsData.weight : ''}/>
+          <input
+            type='number'
+            name='height'
+            placeholder='Height in cm'
+            onInput={handleInput}
+            value={detailsData.height != -1 ? detailsData.height : ''}
+          />
+          <input
+            type='number'
+            name='weight'
+            placeholder='Body mass in kg'
+            onInput={handleInput}
+            value={detailsData.weight != -1 ? detailsData.weight : ''}
+          />
           <div className='button-group'>
             <Link to='/results'>
               <button className='transparent-button'>
@@ -71,7 +96,7 @@ const Details = () => {
               </button>
             </Link>
             <Link to='/finalresults'>
-              <button className='purple-button'>finish</button>
+              <button className='purple-button'>finish &#8594;</button>
             </Link>
           </div>
           <Credits></Credits>
