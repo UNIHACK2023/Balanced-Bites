@@ -228,8 +228,8 @@ const Results = () => {
   const options = {
     chart: {
       type: 'packedbubble',
-      height: '70%',
-      backgroundColor: 'transparent',
+      height: '80%',
+      backgroundColor: 'transparent'
     },
     title: {
       text: '',

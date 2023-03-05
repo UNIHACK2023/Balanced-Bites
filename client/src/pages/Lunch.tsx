@@ -33,10 +33,10 @@ const Lunch = () => {
       </div>
       <div className='container'>
         <div className='top-bar'>
-          <img src={info} onClick={handleOpen} className='info' />
+          <img src={info} onClick={handleOpen} className='info'/>
         </div>
         <div className='main-text'>
-          <img src={lunch} className='logo' />
+          <img src={lunch} className='logo'/>
           <h1 className='page-message'>
             The most important meal to eat everyday.
             <br />
