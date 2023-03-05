@@ -350,6 +350,7 @@ const Results = () => {
           </div>
           <div>
             <h2 className='summary-title'>✳Tips & Tricks✳</h2>
+            <Tips />
             <AiFeedback />
           </div>
         </div>
