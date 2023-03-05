@@ -45,16 +45,16 @@ const Results = () => {
       name: 'Fruits',
       data: [...Array(formData.breakfast.fruit)]
         .map((item: any) => {
-          return { name: 'Breakfast', value: 1 };
+          return { name: 'Breakfast', value: Math.random() * 5 + 1 };
         })
         .concat(
           [...Array(formData.lunch.fruit)].map((item: any) => {
-            return { name: 'Lunch', value: 1 };
+            return { name: 'Lunch', value: Math.random() * 5 + 1 };
           })
         )
         .concat(
           [...Array(formData.dinner.fruit)].map((item: any) => {
-            return { name: 'Dinner', value: 1 };
+            return { name: 'Dinner', value: Math.random() * 5 + 1 };
           })
         ),
       color: '#746BEB',
@@ -63,16 +63,16 @@ const Results = () => {
       name: 'Vegetables',
       data: [...Array(formData.breakfast.vegetable)]
         .map((item: any) => {
-          return { name: 'Breakfast', value: 1 };
+          return { name: 'Breakfast', value: Math.random() * 5 + 1 };
         })
         .concat(
           [...Array(formData.lunch.vegetable)].map((item: any) => {
-            return { name: 'Lunch', value: 1 };
+            return { name: 'Lunch', value: Math.random() * 5 + 1 };
           })
         )
         .concat(
           [...Array(formData.dinner.vegetable)].map((item: any) => {
-            return { name: 'Dinner', value: 1 };
+            return { name: 'Dinner', value: Math.random() * 5 + 1 };
           })
         ),
       color: '#FFC700',
@@ -81,16 +81,16 @@ const Results = () => {
       name: 'Grains',
       data: [...Array(formData.breakfast.grain)]
         .map((item: any) => {
-          return { name: 'Breakfast', value: 1 };
+          return { name: 'Breakfast', value: Math.random() * 5 + 1 };
         })
         .concat(
           [...Array(formData.lunch.grain)].map((item: any) => {
-            return { name: 'Lunch', value: 1 };
+            return { name: 'Lunch', value: Math.random() * 5 + 1 };
           })
         )
         .concat(
           [...Array(formData.dinner.grain)].map((item: any) => {
-            return { name: 'Dinner', value: 1 };
+            return { name: 'Dinner', value: Math.random() * 5 + 1 };
           })
         ),
       color: '#3BB3BD',
@@ -99,16 +99,16 @@ const Results = () => {
       name: 'Protein',
       data: [...Array(formData.breakfast.meat)]
         .map((item: any) => {
-          return { name: 'Breakfast', value: 1 };
+          return { name: 'Breakfast', value: Math.random() * 5 + 1 };
         })
         .concat(
           [...Array(formData.lunch.meat)].map((item: any) => {
-            return { name: 'Lunch', value: 1 };
+            return { name: 'Lunch', value: Math.random() * 5 + 1 };
           })
         )
         .concat(
           [...Array(formData.dinner.meat)].map((item: any) => {
-            return { name: 'Dinner', value: 1 };
+            return { name: 'Dinner', value: Math.random() * 5 + 1 };
           })
         ),
       color: '#A17FBC',
@@ -117,16 +117,16 @@ const Results = () => {
       name: 'Dairy',
       data: [...Array(formData.breakfast.dairy)]
         .map((item: any) => {
-          return { name: 'Breakfast', value: 1 };
+          return { name: 'Breakfast', value: Math.random() * 5 + 1 };
         })
         .concat(
           [...Array(formData.lunch.dairy)].map((item: any) => {
-            return { name: 'Lunch', value: 1 };
+            return { name: 'Lunch', value: Math.random() * 5 + 1 };
           })
         )
         .concat(
           [...Array(formData.dinner.dairy)].map((item: any) => {
-            return { name: 'Dinner', value: 1 };
+            return { name: 'Dinner', value: Math.random() * 5 + 1 };
           })
         ),
       color: '#7FBC8C',
@@ -143,54 +143,39 @@ const Results = () => {
       text: '',
       align: 'left',
     },
-    // tooltip: {
-    //   useHTML: true,
-    //   pointFormat: 'There are {point.value} come from <b>{point.name}</b>',
-    // },
+    tooltip: {
+      useHTML: true,
+      pointFormat: 'This came from <b>{point.name}</b>',
+    },
     plotOptions: {
       packedbubble: {
-        minSize: '50%',
-        maxSize: '900%',
+        minSize: '5%',
+        maxSize: '120%',
         zMin: 0,
-        zMax: 1000,
-
-        dataLabels: {
-          enabled: true,
-          format: '{point.name}',
-          filter: {
-            property: 'y',
-            operator: '>',
-            value: 250,
-          },
-          style: {
-            color: 'black',
-            textOutline: 'none',
-            fontWeight: 'normal',
-          },
-        },
+        zMax: 20,
       },
     },
     series: data,
-    exporting: {
-      chartOptions: {
-        plotOptions: {
-          series: {
-            dataLabels: {
-              enabled: true,
-            },
-          },
-        },
-      },
-    },
     navigation: {
       buttonOptions: {
-        enabled: true,
+        enabled: false,
       },
     },
     credits: {
       enabled: false,
     },
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newData = data.map((series: any) => ({
+        ...series,
+        data: series.data.map((value: any) => Math.random() * 5 + 1),
+      }));
+      setData(newData);
+    }, Math.floor(Math.random() * 8000 + 4000));
+    return () => clearInterval(interval);
+  }, [setData]);
 
   useEffect(() => {}, [setData]);
   return (
