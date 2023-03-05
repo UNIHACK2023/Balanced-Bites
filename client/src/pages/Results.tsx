@@ -239,8 +239,6 @@ const Results = () => {
       <Grid xs={12} lg={6}>
         <div
           style={{
-            width: '100%',
-            height: '100%',
             backgroundColor: '#D9D9D9',
             padding: '0.8vw',
             border: '5px dashed #000000',
