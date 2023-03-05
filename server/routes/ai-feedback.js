@@ -1,6 +1,6 @@
 import express from 'express';
 import { Configuration, OpenAIApi } from 'openai';
-import guide from '../constants';
+import { guide } from '../constants.js';
 
 const aiFeedbackRouter = express.Router();
 
