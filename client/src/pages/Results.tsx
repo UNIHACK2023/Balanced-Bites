@@ -187,6 +187,8 @@ const Results = () => {
       // create copy of options and add "useSimulation": false plus set all values equal to 1
       const optionsCopy = JSON.parse(JSON.stringify(options));
       optionsCopy.plotOptions.packedbubble.useSimulation = false;
+      optionsCopy.title.text = 'Balanced Bites Chart';
+      optionsCopy.chart.backgroundColor = '#FFFFFF';
       optionsCopy.series.forEach((series: any) => {
         series.data.forEach((point: any) => {
           point.value = 1;
@@ -239,8 +241,6 @@ const Results = () => {
       <Grid xs={12} lg={6}>
         <div
           style={{
-            width: '100%',
-            height: '100%',
             backgroundColor: '#D9D9D9',
             padding: '0.8vw',
             border: '5px dashed #000000',
