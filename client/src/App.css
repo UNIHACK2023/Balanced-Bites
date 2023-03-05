@@ -253,3 +253,10 @@ select {
   font-size: 1.3em;
   font-family: Agrandir;
 }
+
+.summary-title {
+  border: #000000 2px solid;
+  padding: 20px;
+  border-radius: 7px;
+  text-align: center;
+}
