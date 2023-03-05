@@ -34,32 +34,32 @@ const Credits = () => {
                         <TableBody>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Luke Prior</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Development</TableCell>
                             <TableCell><a href='https://github.com/LukePrior' target='_blank' style={{color: 'inherit' }}>LukePrior</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Wanning Cai</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Design, Development</TableCell>
                             <TableCell><a href='https://github.com/incalescence' target='_blank' style={{color: 'inherit' }}>incalescence</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Carey Yang</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Development</TableCell>
                             <TableCell><a href='https://github.com/Justcarey13' target='_blank' style={{color: 'inherit' }}>Justcarey13</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Larissa Yip</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Design, Research, Pitching</TableCell>
                             <TableCell><a href='https://github.com/eazoph' target='_blank' style={{color: 'inherit' }}>eazoph</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Jasmin Wu</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Design, Research, Pitching</TableCell>
                             <TableCell><a href='https://github.com/jasminwu' target='_blank' style={{color: 'inherit' }}>jasminwu</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Terence Lau</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>AI Development</TableCell>
                             <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit' }}>Laute</a></TableCell>
                         </TableRow>
                         </TableBody>
@@ -83,11 +83,11 @@ const Credits = () => {
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Front-end</TableCell>
-                            <TableCell>Vite, React</TableCell>
+                            <TableCell>Vite, React, Axios</TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Libraries/Frameworks</TableCell>
-                            <TableCell>MUI</TableCell>
+                            <TableCell>MUI, Highcharts</TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>External APIs</TableCell>
@@ -95,7 +95,7 @@ const Credits = () => {
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Back-end</TableCell>
-                            <TableCell>TODO</TableCell>
+                            <TableCell>Node.js, Express</TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell>Databases</TableCell>
@@ -117,28 +117,28 @@ const Credits = () => {
                         </TableHead>
                         <TableBody>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>Australian Government Department of Health</TableCell>
+                            <TableCell><a href='https://www.health.gov.au/topics/food-and-nutrition/about/eating-well' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                        <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>Australian Institute of Health and Welfare</TableCell>
+                            <TableCell><a href='https://www.aihw.gov.au/reports/australias-health/diet' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>Australian Bureau of Statistics</TableCell>
+                            <TableCell><a href='https://www.abs.gov.au/methodologies/national-health-survey-first-results-methodology/2020-21' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>Foodbank Australia</TableCell>
+                            <TableCell><a href='https://www.foodbank.org.au/food-waste-facts-in-australia/?state=nsw-act' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>The World Counts</TableCell>
+                            <TableCell><a href='https://www.theworldcounts.com/challenges/people-and-poverty/hunger-and-obesity/food-waste-statistics' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell>TODO</TableCell>
-                            <TableCell><a href='https://github.com/Laute' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
+                            <TableCell>Eat For Health</TableCell>
+                            <TableCell><a href='https://www.eatforhealth.gov.au/nutrition-calculators/average-recommended-number-serves-calculator' target='_blank' style={{color: 'inherit', textDecoration: 'none' }}>&#8594;</a></TableCell>
                         </TableRow>
                         </TableBody>
                     </Table>
