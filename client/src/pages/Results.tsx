@@ -184,10 +184,19 @@ const Results = () => {
 
   const generateImage = () => {
     const req = async () => {
+      // create copy of options and add "useSimulation": false plus set all values equal to 1
+      const optionsCopy = JSON.parse(JSON.stringify(options));
+      optionsCopy.plotOptions.packedbubble.useSimulation = false;
+      optionsCopy.series.forEach((series: any) => {
+        series.data.forEach((point: any) => {
+          point.value = 1;
+        });
+      });
+
       const { data } = await axios.post('https://export.highcharts.com/', {
         b64: true,
         constr: 'Chart',
-        infile: JSON.stringify(options),
+        infile: JSON.stringify(optionsCopy),
         type: 'image/png',
         width: '2000'
       });
@@ -197,10 +206,10 @@ const Results = () => {
 
       const data2 = {
         files: [file],
-        title: 'My Foodprint',
-        text: 'Check out my foodprint!',
+        title: 'Balanced Bites Chart',
+        text: 'Check out my Balanced Bites Chart!',
       };
-      
+
       try {
         if (!navigator.canShare(data2)) {
           console.error("Can't share");
